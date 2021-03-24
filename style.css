@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Comfortaa:wght@300&family=Cuprum&family=Rubik:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -22,4 +23,29 @@
 }
 .menu:hover{
     cursor: pointer;
+}
+.label{
+    font-size: 26px;
+    padding: 15.5px;
+    font-style: italic;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Comfortaa';
+}
+.search{
+    width: 500px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    font-size: 22px;
+}
+.search:focus{
+    outline:none;
+}
+.searchContainer{
+    background: white;
+    border-radius: 5px;
+    padding: 0px 15px;
+    margin: 12px;
 }
