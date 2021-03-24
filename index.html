@@ -25,14 +25,24 @@
             </div>
         </div>
     </div>
+    <div class="navMenu" >
+        <div>
+
+        </div>
+    </div>
     <script type="text/javascript">
 
         search = document.querySelector('.searchContainer');
         menu = document.querySelector('.menuContainer');
-        label = document.querySelector('.labelContainer')
         width = document.querySelector('body');
+        label = document.querySelector('.labelContainer');
+        navMenu = document.querySelector('.navMenu');
 
-        search.style.marginLeft = width.offsetWidth / 2 - label.offsetWidth - menu.offsetWidth - search.offsetWidth / 2 + `px`;
+        search.style.marginLeft = width.offsetWidth / 2 - menu.offsetWidth - label.offsetWidth - search.offsetWidth / 2 + `px`;
+
+        menu.addEventListener('click', function(){
+            navMenu.classList.toggle('show');
+        })
 
     </script> 
 </body>     

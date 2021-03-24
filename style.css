@@ -7,6 +7,9 @@
 .topBarContainer{
     background: #512da8;
     height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
 }
 .chtMenu {
     width: 25px;
@@ -32,6 +35,9 @@
     font-weight: lighter;
     font-family: 'Comfortaa';
 }
+.labelContainer{
+    margin-left: 35px;
+}
 .search{
     width: 500px;
     height: 35px;
@@ -48,4 +54,20 @@
     border-radius: 5px;
     padding: 0px 15px;
     margin: 12px;
+}
+.navMenu{
+    width: 320px;
+    height: 1080px;
+    background: white;
+    border-right: 2px solid #D2D2D2;
+    box-shadow: -5px 0px 20px 0px #00000054;
+    display: inline-grid;
+    padding-top: 60px;
+    visibility: hidden;
+    transition: .3s;
+    margin-left: -320px;
+}
+.show{
+    margin-left: 0px;
+    visibility: visible;
 }
