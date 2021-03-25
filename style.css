@@ -1,3 +1,23 @@
+/* colors: */
+.colors{
+  /* primaryColor */
+  background: #673ab7; 
+
+  /* primaryLightColor */
+  background: #9a67ea; 
+
+  /* primaryDarkColor */
+  background: #320b86;
+
+  /* secondaryColor */
+  background: #3f51b5;
+
+  /* secondaryLightColor */
+  background: #757de8;
+
+  /* secondaryDarkColor */
+  background: #002984;
+}
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto&display=swap");
 * {
   margin: 0;
@@ -5,7 +25,7 @@
   font-family: "Roboto", sans-serif;
 }
 .topBarContainer {
-  background: #512da8;
+  background: #673ab7;
   height: 60px;
   position: fixed;
   width: 100%;
@@ -34,11 +54,9 @@
 }
 .label {
   font-size: 26px;
-  padding: 15.5px;
-  font-style: italic;
+  padding: 14px;
   color: white;
   font-weight: lighter;
-  font-family: "Comfortaa";
 }
 .labelContainer {
   margin-left: 35px;
@@ -203,7 +221,7 @@ font-family: 'Comfortaa';
   width: 100px;
   height: 31px;
   border-radius: 10px;
-  background: #8559daa7;
+  background: #9a67ead4;
   display: flex;
 }
 .priceText{
