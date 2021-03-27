@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto&display=swap");
+/* colors: */
+.colors{
+  /* primaryColor */
+  background: #673ab7; 
+
+  /* primaryLightColor */
+  background: #9a67ea; 
+
+  /* primaryDarkColor */
+  background: #320b86;
+
+  /* secondaryColor */
+  background: #3f51b5;
+
+  /* secondaryLightColor */
+  background: #757de8;
+
+  /* secondaryDarkColor */
+  background: #002984;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+@keyframes ripple {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 0.5;
+    }
+    100% {
+      width: 1000px;
+      height: 1000px;
+      opacity: 0;
+    }
+}
+.ripple {
+    position: absolute;
+    background: #c2c2c2;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 1s linear infinite;
+  } 
+
