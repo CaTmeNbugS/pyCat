@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationMenuComponent implements OnInit {
   ngOnInit(): void {
-    const buttons = document.querySelectorAll(".ripplrEffect");
+    const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");
     buttons.forEach((btn) => {
       btn.addEventListener("click", function (event) {
         let x = event.clientX - btn.offsetLeft;
@@ -24,13 +24,13 @@ export class NavigationMenuComponent implements OnInit {
         }, 1000);
       });
     })
-    const search = document.querySelector(".searchContainer");
-    const menu = document.querySelector(".menuContainer");
-    const width = document.querySelector("body");
-    const label = document.querySelector(".labelContainer");
-    const filterContainer = document.querySelector(`.iconContainer`);
+    const search = document.querySelector<HTMLElement>(".searchContainer");
+    const menu = document.querySelector<HTMLElement>(".menuContainer");
+    const width = document.querySelector<HTMLElement>("body");
+    const label = document.querySelector<HTMLElement>(".labelContainer");
+    const filterContainer = document.querySelector<HTMLElement>(`.iconContainer`);
     search.style.marginLeft = width.offsetWidth / 2 - menu.offsetWidth - label.offsetWidth - search.offsetWidth / 2 + `px`;
-    filterContainer.style.marginLeft = (width.offsetWidth - search.offsetWidth - label.offsetWidth - menu.offsetWidth -  filterContainer.offsetWidth) / 2 + `px`;
+    filterContainer.style.marginLeft = (width.offsetWidth - search.offsetWidth - label.offsetWidth - menu.offsetWidth -  filterContainer.offsetWidth) / 2 + `px` ;
   }
   constructor() {
   }

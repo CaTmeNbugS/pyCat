@@ -1,106 +1,106 @@
 <div class="navMenuContainer">
-  <div class="navMenu">
-    <div class="navMainContainer">
-      <div class="navMain ripplrEffect">
-        <h2 class="name">Name</h2>
-        <span class="mail">example@xmail.com</span>
+      <div class="navMenu">
+        <div class="navMainContainer">
+          <div class="navMain ripplrEffect">
+            <h2 class="name">Name</h2>
+            <span class="mail">example@xmail.com</span>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Главная</h2>
+            </div>
+          </div>
+        </div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon">
+              <i class="fas fa-cash-register"></i>
+            </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Покупка</h2>
+            </div>
+          </div>
+        </div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon">
+              <i class="fas fa-paw"></i>
+            </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Течка</h2>
+            </div>
+          </div>
+        </div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon"></div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">title</h2>
+            </div>
+          </div>
+        </div>
+        <div class="hr Hr"></div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon">
+              <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Закладки</h2>
+            </div>
+          </div>
+        </div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon">
+              <i class="fas fa-shopping-bag"></i>
+            </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Корзин</h2>
+            </div>
+          </div>
+        </div>
+        <div class="hr Hr"></div>
+        <div class="navBtn">
+          <div class="btn ripplrEffect">
+            <div class="icon">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Настройки</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hr"></div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect" (click)="ripplrEffect($event)">
-        <div class="icon">
-          <i class="fas fa-home"></i>
+    <div class="topBarContainer">
+      <div class="topBar">
+        <div class="menuContainer"  >
+          <div class="menu" (click)="showMenu()">
+            <div class="chtMenu"></div>
+            <div class="chtMenu"></div>
+            <div class="chtMenu"></div>
+          </div>
         </div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">Главная</h2>
+        <div class="labelContainer">
+          <h2 class="label">Покупка котов и кошек</h2>
         </div>
+          <div class="searchContainer">
+            <input placeholder="Поиск" class="search" type="text">
+          </div>
+          <div class="iconContainer" >
+            <div class="searchIcon " >
+              <i class="fas fa-search Icon" (click)="showSearch()" ></i>
+            </div>
+            <div class="filterIcon " >
+              <i class="fas fa-filter Icon "></i>
+            </div>
+          </div>
       </div>
     </div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect">
-        <div class="icon">
-          <i class="fas fa-cash-register"></i>
-        </div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">Покупка</h2>
-        </div>
-      </div>
-    </div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect">
-        <div class="icon">
-          <i class="fas fa-paw"></i>
-        </div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">Течка</h2>
-        </div>
-      </div>
-    </div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect">
-        <div class="icon"></div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">title</h2>
-        </div>
-      </div>
-    </div>
-    <div class="hr Hr"></div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect">
-        <div class="icon">
-          <i class="fas fa-bookmark"></i>
-        </div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">Закладки</h2>
-        </div>
-      </div>
-    </div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect">
-        <div class="icon">
-          <i class="fas fa-shopping-bag"></i>
-        </div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">Корзин</h2>
-        </div>
-      </div>
-    </div>
-    <div class="hr Hr"></div>
-    <div class="navBtn">
-      <div class="btn ripplrEffect">
-        <div class="icon">
-          <i class="fas fa-cog"></i>
-        </div>
-        <div class="textSectionBtn">
-          <h2 class="textBtn">Настройки</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="topBarContainer">
-  <div class="topBar">
-    <div class="menuContainer" (click)="showMenu()">
-      <div class="menu">
-        <div class="chtMenu"></div>
-        <div class="chtMenu"></div>
-        <div class="chtMenu"></div>
-      </div>
-    </div>
-    <div class="labelContainer">
-      <h2 class="label">Покупка котов и кошек</h2>
-    </div>
-    <div class="searchContainer">
-      <input placeholder="Поиск" class="search" type="text" />
-    </div>
-    <div class="iconContainer">
-      <div class="searchIcon">
-        <i class="fas fa-search Icon" (click)="showSearch()"></i>
-      </div>
-      <div class="filterIcon">
-        <i class="fas fa-filter Icon"></i>
-      </div>
-    </div>
-  </div>
-</div>
