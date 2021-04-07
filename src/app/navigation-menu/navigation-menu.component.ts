@@ -28,9 +28,12 @@ export class NavigationMenuComponent implements OnInit {
     const menu = document.querySelector<HTMLElement>(".menuContainer");
     const width = document.querySelector<HTMLElement>("body");
     const label = document.querySelector<HTMLElement>(".labelContainer");
+    const filterMenu = document.querySelector<HTMLElement>(".filterMenuContainer");
     const filterContainer = document.querySelector<HTMLElement>(`.iconContainer`);
+    const navMenu = document.querySelector<HTMLElement>(".navMenu");
     search.style.marginLeft = width.offsetWidth / 2 - menu.offsetWidth - label.offsetWidth - search.offsetWidth / 2 + `px`;
     filterContainer.style.marginLeft = (width.offsetWidth - search.offsetWidth - label.offsetWidth - menu.offsetWidth -  filterContainer.offsetWidth) / 2 + `px` ;
+    filterMenu.style.marginLeft = width.offsetWidth - navMenu.offsetWidth + `px`;
   }
   constructor() {
   }
@@ -45,5 +48,10 @@ export class NavigationMenuComponent implements OnInit {
   showSearch() {
     const search = document.querySelector(".searchContainer");
     search.classList.toggle("Show");
+  }
+  showFilterMenu() {
+    const filterMenu = document.querySelector<HTMLElement>(".filterMenu");
+    const filterContainer = document.querySelector<HTMLElement>(`.filterMenuContainer`);
+    filterMenu.classList.toggle('showFilter');
   }
 }

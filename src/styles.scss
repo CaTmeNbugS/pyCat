@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* colors: */
 .colors{
   /* primaryColor */
@@ -22,7 +23,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+::-webkit-scrollbar {
+  background: none;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d2d2d2;
+  border-radius: 15px;
 }
 @keyframes ripple {
     0% {
@@ -44,4 +53,23 @@
     border-radius: 50%;
     animation: ripple 1s linear infinite;
   } 
-
+  .FavoriteRipple{
+    animation: FavoriteRipple 1s linear infinite !important;
+    background: #3f51b5;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    position: absolute;
+  }
+  @keyframes FavoriteRipple {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 0.5;
+    }
+    100% {
+      width: 2000px;
+      height: 2000px;
+      opacity: 0;
+    }
+}
