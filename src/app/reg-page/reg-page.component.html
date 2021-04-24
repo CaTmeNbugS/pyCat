@@ -1,0 +1,28 @@
+<div class="formContainer" >
+    <form [formGroup]="form" >
+        <div class="regBox"v>
+            <h2 class="title">Имя</h2>
+            <input type="text" formControlName="name" > 
+        </div>
+        <div class="regBox">
+            <h2 class="title">Фамилия</h2>
+            <input type="text" formControlName="surname" > 
+        </div>
+        <div class="regBox">
+            <h2 class="title">Город</h2>
+            <input type="text" > 
+        </div>
+        <div class="regBox">
+            <h2 class="title">Почта</h2>
+            <input type="email" formControlName="email"> 
+        </div>
+        <div class="regBox" >
+            <h2 class="title">Пароль</h2>
+            <input type="text" formControlName="password" > 
+        </div>
+        <div class="buttonBox " >
+
+            <button class="ripplrEffect" type="submit" [disabled]="form.invalid"><h2>Регистрация</h2></button>
+        </div>
+    </form>
+</div>

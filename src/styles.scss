@@ -33,6 +33,9 @@
   background: #d2d2d2;
   border-radius: 15px;
 }
+::selection{
+  background: #757de8;
+}
 @keyframes ripple {
     0% {
       width: 0px;
@@ -61,6 +64,15 @@
     border-radius: 50%;
     position: absolute;
   }
+  app-page{
+    justify-content: center;
+    display: grid;
+  }
+  app-buy-page {
+    display: grid;
+    justify-content: right;
+    width: 1920px;
+}
   @keyframes FavoriteRipple {
     0% {
       width: 0px;

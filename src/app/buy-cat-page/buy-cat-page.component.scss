@@ -1,0 +1,134 @@
+.container{
+    width: 1280px;
+    display: flex;
+    margin-top: 25px;
+}
+.frame{
+    padding: 15px 21px 15px 15px;
+}
+.itemContainer{
+    width: 880px;
+    padding: 0px 25px;
+}
+.sellerBox{
+    display: flex;
+}
+.shopContainer{
+    width: 400px;
+    height: 407px;
+    display: grid;
+    box-shadow: 0px -5px 20px 0px #00000054;
+    border-radius: 10px;
+}
+.imgBox{
+    height: 60px;
+    background: #d2d2d2;
+    border-radius: 50%;
+}
+.imgContainer{
+    width: 60px;
+    height: 60px;
+}
+.sellerName{
+    font-size: 27px;
+}
+.textContainer{ 
+    padding: 12px;
+    width: 280px;
+}
+.buyContainer{
+    margin-top: 20px;
+}
+.buyBtn{
+    padding: 15px;
+    background: #757de8;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    transition: .3s;
+}
+.buyBtn:hover{
+    border-radius: 20px;
+    background: #3f51b5;
+    cursor: pointer;
+}
+.contact{
+    padding: 5px 12px;
+
+}
+.contactBox{
+    display: flex;
+    padding: 5px;
+    border-bottom: 2px solid #d2d2d2;
+}
+.fas{
+    font-size: 22px;
+    padding: 2px;
+}
+.contactText{
+    font-size: 20px;
+    margin-left: 25px;
+}
+.price{
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    justify-content: center;
+    display: grid;
+}
+.priceBadge{
+    padding: 15px;
+    background: whitesmoke;
+    border-radius: 20px;
+}
+.catName{
+    font-size: 30px;
+    padding-left: 15px;
+}
+.favorite{
+font-size: 32px;
+padding-top: 4px;
+}
+.topBarArea{
+    display: flex;
+}
+.catNameContainer{
+    width: 770px;
+}
+.imgBoxContainer{
+    margin-top: 20px;
+}
+.img{
+    height: 650px;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+.imgBlockFlex{
+    width: 75px;
+    height: 60px;
+    background: whitesmoke;
+    border-radius: 10px;
+    margin-right: 5px;
+    border: 2px solid whitesmoke;
+    transition: .2s linear;
+}
+.imgBlockFlex:hover{
+    cursor: pointer;
+    border: 2px solid #757de8;
+}
+.imgFlexRow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+.fas.fa-arrow-left{
+    font-size: 27px;
+    padding: 4px;
+    color: black;
+    transition: .1s cubic-bezier(0.55, 0.09, 0.68, 0.5);
+}
+.fas.fa-arrow-left:hover{
+    color: #3f51b5;
+    transform: translate(-10px, 0px)
+}

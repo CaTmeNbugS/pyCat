@@ -1,0 +1,69 @@
+.formContainer{
+    width: 600px;
+    height: 800px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0px #0000001a;
+}
+form{
+    padding: 25px;
+}
+.title{
+    font-size:28px;
+}
+input{
+    width: 520px;
+    height: 37px;
+    border: 2px solid #d2d2d27a;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 22px;
+    padding: 0px 15px;
+    transition: .2s;
+}
+input:hover{
+    border: 2px solid #d2d2d2;
+}
+input:focus{
+    border-bottom: 2px solid #757de8;
+    outline: none;
+}
+input{
+    &.ng-invalid.ng-touched{
+        border-bottom: 2px solid #ff7961;
+    }
+    &.ng-valid.ng-touched{
+        border-bottom: 2px solid #4caf50; 
+    }
+}
+.regBox{
+    margin: 10px 0px;
+}
+button {
+    padding: 15px 25px;
+    font-size: 20px;
+    background: #3f51b5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: .2s;
+    overflow: hidden;
+    position: relative;
+}
+button:hover {
+    cursor: pointer;
+    background: #673ab7;
+}
+button:focus {
+    outline: none;
+}
+.buttonBox{
+    text-align: center;
+}
+button:disabled {
+    background: #d2d2d2;
+}
+button:disabled:hover {
+    background: #d2d2d2;
+    cursor: not-allowed;
+}

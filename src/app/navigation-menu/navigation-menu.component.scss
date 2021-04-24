@@ -5,6 +5,7 @@ a{
 .activePage{
   background: #3f51b538;
   color: #3f51b5;
+  fill:#3f51b5 ;
 }
 .topBarContainer {
     background: #fafafa;
@@ -120,14 +121,19 @@ a{
     transition: .1s ease-out;
     display: flex;
   }
-  i.fas {
-      padding: 10px 0px;
-      font-size: 22px;
-      margin-left: 15px;
+  img.iconPng {
+    padding: 7px 0px;
+    margin-left: 15px;
+    height: 30px;
   }
+  i.fas {
+    padding: 10px 0px;
+    font-size: 22px;
+    margin-left: 15px;
+}
   .icon {
       width: 40px;
-      height: 40px;
+      height: 44px;
   }
   .ripplrEffect:hover {
     background: #f0f0f0;

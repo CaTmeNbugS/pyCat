@@ -1,121 +1,81 @@
-<div class="container">
-    <div style="height: 60px;" ></div>
-    <div class="row" >
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block" >
-        <div class="imgBlock" >
-        </div>
-        <div class="blockBottomBarContainer" >
-          <div class="blockBottomBar" >
-            <h2 class="catName">Name</h2>
-            <div class="price" >
-              <h2 class="priceText" >500</h2>
-              <h2 class="priceTextValue" >руб</h2>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="search" >
+  <input class="searchInput" type="text" placeholder="Поиск">
+</div> 
+<div class="buyBlock" >
+  <div class="row" >
+    <app-buy-block
+      *ngFor="let CatBlock of buyCatsArray"
+      [buyCatBlock]="CatBlock"
+    ></app-buy-block>
+    </div>
+<div class="filterBlock" >
+  <div class="filterFooterName" >
+    <h2 style="font-size:30px" >Фильтры</h2>
   </div>
+  <div class="filterBox" >
+    <div class="filterSection" >
+      <h2 class="filterName" >Цена</h2>
+      <div class="amountBox" >
+        <div class="amountContent" >
+          <h2>от</h2>
+          <input class="amount" type="text">
+        </div>
+        <div class="amountContent">
+          <h2>до</h2>
+          <input class="amount"type="text">
+        </div>
+        <div class="amountContent">
+          <h2>₽</h2>
+        </div>
+      </div>
+    </div>
+    <div class="filterSection" >
+      <h2 class="filterName" >Пол</h2>
+      <div class="amountBox" >
+        <div class="amountContent" >
+          <input type="checkbox" >
+          <h2>кот</h2>
+        </div>
+        <div class="amountContent">
+          <input type="checkbox" >
+          <h2>кошка</h2>
+        </div>
+      </div>
+    </div>
+    <div class="filterSection" >
+      <h2 class="filterName" >Возраст</h2>
+      <div class="amountBox" >
+        <div class="amountContent" >
+          <h2>от</h2>
+          <input class="amount old " type="text">
+        </div>
+        <div class="amountContent">
+          <h2>до</h2>
+          <input class="amount old"type="text">
+        </div>
+        <div class="amountContent">
+          <h2>лет</h2>
+        </div>
+      </div>
+    </div>
+    <div class="filterSection" >
+      <h2 class="filterName" >Порода</h2>
+      <div class="amountBox" >
+        <div class="amountContent" >
+          <input class="amount" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="filterSection" >
+      <h2 class="filterName" >Город</h2>
+      <div class="amountBox" >
+        <div class="amountContent" >
+          <input class="amount" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+

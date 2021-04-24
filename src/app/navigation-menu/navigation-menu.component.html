@@ -8,6 +8,7 @@
         </div>
         <div class="hr"></div>
         <div class="navBtn">
+          <a  routerLink="/main" >
           <div routerLinkActive="activePage" class="btn ripplrEffect">
             <div class="icon">
               <i class="fas fa-home"></i>
@@ -16,9 +17,10 @@
               <h2 class="textBtn">Главная</h2>
             </div>
           </div>
+        </a>
         </div>
         <div class="navBtn">
-          <a  routerLink="/" >
+          <a  routerLink="/buy" >
           <div routerLinkActive="activePage" class="btn ripplrEffect">
             <div class="icon">
               <i class="fas fa-cash-register"></i>
@@ -30,27 +32,21 @@
         </a>
         </div>
         <div class="navBtn">
-          <div class="btn ripplrEffect">
+          <a   routerLink="/estrus" >
+          <div routerLinkActive="activePage" class="btn ripplrEffect">
             <div class="icon">
               <i class="fas fa-paw"></i>
             </div>
             <div class="textSectionBtn">
-              <h2 class="textBtn">Течка</h2>
+              <h2 class="textBtn">Вязка</h2>
             </div>
           </div>
-        </div>
-        <div class="navBtn">
-          <div class="btn ripplrEffect">
-            <div class="icon"></div>
-            <div class="textSectionBtn">
-              <h2 class="textBtn">Магазин</h2>
-            </div>
-          </div>
+        </a>
         </div>
         <div class="hr Hr"></div>
         <div class="navBtn">
-          <a routerLink="/favorite" >
-          <div routerLinkActive="activePage" class="btn ripplrEffect">
+          <a  routerLink="/favorite" >
+          <div routerLinkActive="activePage" routerLinkActive="activePage" class="btn ripplrEffect">
             <div class="icon">
               <i class="fas fa-bookmark"></i>
             </div>
@@ -60,19 +56,10 @@
             </div>
             </a>
         </div>
-        <div class="navBtn">
-          <div class="btn ripplrEffect">
-            <div class="icon">
-              <i class="fas fa-shopping-bag"></i>
-            </div>
-            <div class="textSectionBtn">
-              <h2 class="textBtn">Корзина</h2>
-            </div>
-          </div>
-        </div>
         <div class="hr Hr"></div>
         <div class="navBtn">
-          <div class="btn ripplrEffect">
+          <a  routerLink="/settings" >
+          <div routerLinkActive="activePage" class="btn ripplrEffect">
             <div class="icon">
               <i class="fas fa-cog"></i>
             </div>
@@ -80,6 +67,7 @@
               <h2 class="textBtn">Настройки</h2>
             </div>
           </div>
+        </a>
         </div>
       </div>
     </div>
@@ -95,17 +83,6 @@
         <div class="labelContainer">
           <h2 class="label">Покупка котов и кошек</h2>
         </div>
-          <div class="searchContainer">
-            <input placeholder="Поиск" class="search" type="text">
-          </div>
-          <div class="iconContainer" >
-            <div class="searchIcon " >
-              <i class="fas fa-search Icon" (click)="showSearch()" ></i>
-            </div>
-            <div class="filterIcon " >
-              <i class="fas fa-filter Icon " (click)="showFilterMenu()" ></i>
-            </div>
-          </div>
       </div>
     </div>
     <div class="filterMenuContainer">

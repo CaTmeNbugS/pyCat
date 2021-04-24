@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShopPageComponent } from './shop-page.component';
+import { PersonalAreaPageComponent } from './personal-area-page.component';
 
-describe('ShopPageComponent', () => {
-  let component: ShopPageComponent;
-  let fixture: ComponentFixture<ShopPageComponent>;
+describe('PersonalAreaPageComponent', () => {
+  let component: PersonalAreaPageComponent;
+  let fixture: ComponentFixture<PersonalAreaPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShopPageComponent ]
+      declarations: [ PersonalAreaPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShopPageComponent);
+    fixture = TestBed.createComponent(PersonalAreaPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

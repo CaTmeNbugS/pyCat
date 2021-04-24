@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-favorite-page',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritePageComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+
     
     const favoriteIcon = document.querySelectorAll<HTMLElement>(".favorite");
     favoriteIcon.forEach((favorite) => {
