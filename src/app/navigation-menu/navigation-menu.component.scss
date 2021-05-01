@@ -140,7 +140,8 @@ a{
     cursor: pointer;
   }
   .ripplrEffect:active {
-    background: #d2d2d2;
+    background: #ebebeb;
+    transition-delay: .3s;
   }
   .textSectionBtn {
     padding: 10px;

@@ -33,7 +33,6 @@ input.searchInput:hover {
 }
 .filterBlock{
   width: 300px;
-  background: #f0f0f0;
   border: 3px solid #e1e1e1;
   border-radius: 10px;
   margin: 13px 20px;
@@ -45,10 +44,6 @@ input.searchInput:hover {
   text-align: center;
   border-radius: 9px;
 }
-.filterBox{
-padding-top: 10px;
-}
-
 .filterName{
   font-size: 25px;
 }
@@ -75,13 +70,71 @@ input.amount:focus {
   display: flex;
 }
 .filterSection {
-  padding: 5px 15px;
+  padding: 20px 15px 15px 15px;
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 .filterSection:hover {
   background: white;
-  border-radius: 10px;
 }
 .old{
   width: 50px !important;
 }
+input[type="checkbox"]{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    transition: .2s;
+}
+input[type="checkbox"]:hover{
+  border: 2px solid #757de8;
+}
+input[type="checkbox"]:focus{
+  outline: none;
+    border-radius: 5px;
+    background: #757de840;
+    border: 2px solid #757de8;
+}
+input[type="checkbox"]:after{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+input[type="checkbox"]:checked{
+  background:#757de8;
+  border-radius: 5px;
+  border: 2px solid #757de8;
+}
+input[type="checkbox"]:checked:after{
+  display:block;
+}
+.checkboxPadding{
+  padding: 3px;
+}
+select{
+  padding: 5px;
+  border: 2px solid #757de8;
+  border-radius: 10px;
+}
+.hr{
+  height: 3px;
+  background: #e1e1e1;
+}
+.selectBreed {
+  padding: 5px 10px;
+  border: 2px solid #757de8;
+  border-radius: 10px;
+  transition: .2s;
+}
+.selectBreed:hover {
+  background: #757de854;
+  cursor: pointer;
+}
+

@@ -25,6 +25,23 @@ export class BuyPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");
+    buttons.forEach((btn) => {
+      btn.addEventListener("mousedown", function (event) {
+        let x = event.clientX - btn.offsetLeft;
+        let y = event.clientY - btn.offsetTop;
+
+        let ripple = document.createElement("span");
+        ripple.style.left = x + `px`;
+        ripple.style.top = y + `px`;
+        ripple.classList.add("rippleF");
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 1000);
+      });
+    })
   }
   buyCatsArray: buyCatsInterface[] = [
     {name: 'Василий',

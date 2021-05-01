@@ -10,7 +10,7 @@ import { RegPageComponent } from './reg-page/reg-page.component';
 
 
 const routes: Routes = [
-  {path: 'main', component: MainPageComponent},
+  {path: '', component: MainPageComponent},
   {path: 'buy', component: BuyPageComponent},
   {path: 'estrus', component: EstrusPageComponent},
   {path: 'favorite', component: FavoritePageComponent},

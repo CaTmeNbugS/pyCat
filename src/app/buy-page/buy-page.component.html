@@ -1,3 +1,4 @@
+<app-breed-menu></app-breed-menu>
 <div class="search" >
   <input class="searchInput" type="text" placeholder="Поиск">
 </div> 
@@ -13,7 +14,7 @@
     <h2 style="font-size:30px" >Фильтры</h2>
   </div>
   <div class="filterBox" >
-    <div class="filterSection" >
+    <div class="filterSection ripplrEffect" >
       <h2 class="filterName" >Цена</h2>
       <div class="amountBox" >
         <div class="amountContent" >
@@ -29,20 +30,26 @@
         </div>
       </div>
     </div>
-    <div class="filterSection" >
+    <div class="hr" ></div>
+    <div class="filterSection ripplrEffect" >
       <h2 class="filterName" >Пол</h2>
-      <div class="amountBox" >
+      <div class="amountBox" style="justify-content: space-between;" >
         <div class="amountContent" >
-          <input type="checkbox" >
-          <h2>кот</h2>
+          <div class="checkboxPadding"> 
+            <input type="checkbox" >
+          </div>
+          <h2>мальчик</h2>
         </div>
         <div class="amountContent">
-          <input type="checkbox" >
-          <h2>кошка</h2>
+          <div class="checkboxPadding"> 
+            <input type="checkbox" >
+          </div>
+          <h2>девочка</h2>
         </div>
       </div>
     </div>
-    <div class="filterSection" >
+    <div class="hr" ></div>
+    <div class="filterSection ripplrEffect" >
       <h2 class="filterName" >Возраст</h2>
       <div class="amountBox" >
         <div class="amountContent" >
@@ -58,15 +65,19 @@
         </div>
       </div>
     </div>
-    <div class="filterSection" >
+    <div class="hr" ></div>
+    <div class="filterSection ripplrEffect" >
       <h2 class="filterName" >Порода</h2>
       <div class="amountBox" >
         <div class="amountContent" >
-          <input class="amount" type="text">
+          <div class="selectBreed" >
+            <h2 style="font-size: 18px;" >Порода</h2>
+          </div>
         </div>
       </div>
     </div>
-    <div class="filterSection" >
+    <div class="hr" ></div>
+    <div class="filterSection ripplrEffect" >
       <h2 class="filterName" >Город</h2>
       <div class="amountBox" >
         <div class="amountContent" >

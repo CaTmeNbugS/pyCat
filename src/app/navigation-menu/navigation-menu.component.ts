@@ -9,7 +9,7 @@ export class NavigationMenuComponent implements OnInit {
   ngOnInit(): void {
     const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");
     buttons.forEach((btn) => {
-      btn.addEventListener("click", function (event) {
+      btn.addEventListener("mousedown", function (event) {
         let x = event.clientX - btn.offsetLeft;
         let y = event.clientY - btn.offsetTop;
 

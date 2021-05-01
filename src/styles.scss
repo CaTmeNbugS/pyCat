@@ -56,6 +56,14 @@
     border-radius: 50%;
     animation: ripple 1s linear infinite;
   } 
+  .rippleF {
+    position: absolute;
+    background: #c2c2c2bb;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 1s linear infinite;
+  } 
   .FavoriteRipple{
     animation: FavoriteRipple 1s linear infinite !important;
     background: #3f51b5;
@@ -71,7 +79,15 @@
   app-buy-page {
     display: grid;
     justify-content: right;
-    width: 1920px;
+    width: 1910px;
+}
+app-breed-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1910px;
+  height: 1080px;
+  position: absolute;
 }
   @keyframes FavoriteRipple {
     0% {

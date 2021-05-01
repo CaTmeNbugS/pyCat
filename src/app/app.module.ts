@@ -16,6 +16,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { PageComponent } from './frame/frame.component';
 import { BuyBlockComponent } from './buy-block/buy-block.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BreedComponent } from './breed/breed.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginPageComponent,
     PageComponent,
     BuyBlockComponent,
+    BreedComponent,
   ],
   imports: [
     BrowserModule,
