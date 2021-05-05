@@ -17,8 +17,6 @@ const routes: Routes = [
   {path: 'settings', component: SettingsPageComponent},
   {path: 'registration', component: RegPageComponent},
   {path: 'buy/:id', component: BuyCatPageComponent},
-  
-
 ];
 
 @NgModule({
