@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
+// tslint:disable-next-line:class-name
 export interface buyCatsInterface{
   name: string;
   description: string;
@@ -19,30 +20,115 @@ export interface buyCatsInterface{
   templateUrl: './buy-page.component.html',
   styleUrls: ['./buy-page.component.scss']
 })
-export class BuyPageComponent implements OnInit {
+export class BuyPageComponent implements OnInit{
 
 
   constructor() { }
 
   ngOnInit(): void {
-    const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");
+    const buttons = document.querySelectorAll<HTMLElement>('.ripplrEffect');
     buttons.forEach((btn) => {
-      btn.addEventListener("mousedown", function (event) {
-        let x = event.clientX - btn.offsetLeft;
-        let y = event.clientY - btn.offsetTop;
+      btn.addEventListener("mousedown", function(event) {
+        const x = event.clientX - btn.offsetLeft;
+        const y = event.clientY - btn.offsetTop;
 
-        let ripple = document.createElement("span");
+        const ripple = document.createElement("span");
         ripple.style.left = x + `px`;
         ripple.style.top = y + `px`;
-        ripple.classList.add("rippleF");
+        ripple.classList.add('rippleF');
         this.appendChild(ripple);
 
         setTimeout(() => {
           ripple.remove();
         }, 1000);
       });
+    });
+    const search = document.querySelector<HTMLElement>('.searchBreed');
+    search.addEventListener('input', function(){
+      const v = this.value.trim();
+      const breedblocks = document.querySelectorAll('.cardCell');
+      // tslint:disable-next-line:triple-equals
+      if (v != ''){
+        breedblocks.forEach(function(elem){
+          if ( elem.innerText.search(v) == -1){
+            elem.classList.add('hide');
+          }
+          else{
+              elem.classList.remove('hide');
+          }
+        });
+      }
+      else{
+        breedblocks.forEach(function(elem){
+          elem.classList.remove('hide');
+        })
+      }
+    });
+    const cells = document.querySelectorAll('.cardCell');
+    const card = document.querySelector('.card');
+    const btns = document.querySelectorAll('.filterCard');
+    cells.forEach((cell) => {
+        btns[0].addEventListener('click',function(event){
+          console.log(event)
+          cell.classList.add('selectedCell');
+        });
+        btns[1].addEventListener('click',function(){
+          cell.classList.remove('selectedCell');
+        })
+      cell.addEventListener('click',function(event){
+        if(event.path[3] == card){
+          cell.classList.toggle('selectedCell');
+        }
+        if(event.path[2] == card){
+            cell.classList.toggle('selectedCell');
+          }
+        else{
+          return
+        }
+      })
+    });
+    const searchCity = document.querySelector<HTMLElement>('.searchСity');
+    searchCity.addEventListener('input',function(){
+    const vCity = this.value.trim();
+    const breedblocks = document.querySelectorAll('.cardCell');
+    if(vCity !=''){
+      breedblocks.forEach(function(elem){
+        if ( elem.innerText.search(vCity) == -1){
+          elem.classList.add('hide');
+        }
+        else{
+            elem.classList.remove('hide');
+        }
+      });
+    }
+    else{
+      breedblocks.forEach(function(elem){
+        elem.classList.remove('hide');
+      })
+    }
+  });
+  const cellsCity = document.querySelectorAll('.cellCity');
+  const btnsCity = document.querySelectorAll('.filterCity');
+  cellsCity.forEach((cell) => {
+    btnsCity[0].addEventListener('click',function(){
+      cell.classList.add('selectedCell');
+      });
+      btnsCity[1].addEventListener('click',function(){
+        cell.classList.remove('selectedCell');
+      })
+      cell.addEventListener('click',function(){
+        cell.classList.toggle('selectedCell');
     })
+  });
   }
+  showCard(){
+    const card = document.querySelector<HTMLElement>(".card");
+    card.classList.toggle('showCard');
+  };
+  showCardCity(){
+    const cardCity = document.querySelector<HTMLElement>("#city");
+    cardCity.classList.toggle('showCard');
+  };
   buyCatsArray: buyCatsInterface[] = [
     {name: 'Василий',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, quia voluptatibus consequatur quis nemo doloremque minus possimus, cumque temporibus aliquam eveniet. Iste delectus molestias, aliquid fugit rerum sapiente, veniam blanditiis laboriosam quos nulla iusto nam tempora sequi voluptas earum culpa facilis voluptatibus. Itaque, dicta delectus placeat quidem reiciendis numquam saepe ad non odit, assumenda, dolorem officia repudiandae!',
@@ -67,3 +153,11 @@ export class BuyPageComponent implements OnInit {
      city: 'Самара',breed: 'Балинезийская',age: 1, price: '2500',value: 'руб', id:7, male:false, female:true},
   ]
 }
+function showCard() {
+  throw new Error('Function not implemented.');
+}
+
+function breedPrint() {
+  throw new Error('Function not implemented.');
+}
+

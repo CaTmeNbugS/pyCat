@@ -1,4 +1,3 @@
-<app-breed-menu></app-breed-menu>
 <div class="search" >
   <input class="searchInput" type="text" placeholder="Поиск">
 </div> 
@@ -70,23 +69,988 @@
       <h2 class="filterName" >Порода</h2>
       <div class="amountBox" >
         <div class="amountContent" >
-          <div class="selectBreed" >
-            <h2 style="font-size: 18px;" >Порода</h2>
+          <div (click)="showCard()" class="selectBreed" >
+            <h2 style="font-size: 18px;" >Выбрать породу</h2>
           </div>
         </div>
       </div>
     </div>
     <div class="hr" ></div>
     <div class="filterSection ripplrEffect" >
-      <h2 class="filterName" >Город</h2>
+      <h2 class="filterName" >Город / Область</h2>
       <div class="amountBox" >
         <div class="amountContent" >
-          <input class="amount" type="text">
+          <div (click)="showCardCity()" class="selectBreed" >
+            <h2 style="font-size: 18px;" >Выбрать город / регион</h2>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="card" >
+  <div class="filters" >
+      <div class="cardFooterBox" >
+          <input class="searchBreed" type="text" placeholder="Поиск" >
+          <div style="margin-left: 5px;" class="cardIconFilterBox" >
+              <div class="cardIconFilter" >
+                  <i style="font-size: 30px;" class="fas fa-bars"></i>
+              </div>
+          </div>
+      </div>
+      <div class="cardFilter" >
+          <div class="filterCard" >
+              <h2>Выбрать все</h2>
+          </div>
+          <div class="filterCard" >
+              <h2>Убрать выбор со всего</h2>
+          </div>
+      </div>
+  </div>
+<div>
+    <div class="cardCell" >
+         <div class="select" ></div>
+        <h2 class="cardCellText" >Без породы</h2>
+    </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Абиссинская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Азиатская табби</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Американская короткошерстная</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Американский керл</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Аравийский мау</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Австралийский мист</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Американская жесткошерстная</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Американский бобтейл</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Анатолийская</h2>
+  </div>
 
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Балинезийская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Бенгальская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Бомбейская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Британская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Бурмилла</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Бирманская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Бразильская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Бурманская</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Гавана Браун</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Гималайская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Гигантская афродита</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Девон-рекс</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Донской сфинкс</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Египетский мау</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Канаани</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Као мани</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Кельтская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Корат</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Курильский бобтейл</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Канадский сфинкс</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Карельский бобтейл</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Кимрик</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Корниш-рекс</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Лаперм</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ликой</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Манчкин</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Меконгский бобтейл</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Мэнкс</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Мейн-кун</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Минскин</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Немецкий рекс</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Норвежская лесная</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Нибелунг</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Орегон-рекс</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Оцикет</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ориентальная</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Персидская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Пикси-боб</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Петерболд</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Рагамаффин</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Рэгдолл</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Русская голубая</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Саванна</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Серенгети</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сибирская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Скукум</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сококе</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Селкирк-рекс</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сиамская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сингапурская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сноу-шу</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сомалийская</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тайская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тойгер</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Турецкая ангора</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Той-боб</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тонкинская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Турецкий ван</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Украинский левкой</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Уральский рекс</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Цейлонская</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Чаузи</h2>
+  </div>
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Шантильи Тиффани</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Шартрез</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Шотландская вислоухая</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Шотландская прямоухая</h2>
+  </div>
+
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Эгейская кошка</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Экзотическая</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Эльф</h2>
+  </div>
+
+
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Яванская</h2>
+  </div>
+  <div class="cardCell" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Японский бобтейл</h2>
+  </div>
+</div>
+</div>
+<div class="card" id="city" >
+  <div class="filters" >
+      <div class="cardFooterBox" >
+          <input class="searchBreed searchСity" type="text" placeholder="Поиск" >
+          <div style="margin-left: 5px;" class="cardIconFilterBox" >
+              <div class="cardIconFilter" >
+                  <i style="font-size: 30px;" class="fas fa-bars"></i>
+              </div>
+          </div>
+      </div>
+      <div class="cardFilter" >
+          <div class="filterCard filterCity" >
+              <h2>Выбрать все</h2>
+          </div>
+          <div class="filterCard filterCity" >
+              <h2>Убрать выбор со всего</h2>
+          </div>
+      </div>
+  </div>
+<div>
+    <div class="cardCell cellCity" >
+         <div class="select" ></div>
+        <h2 class="cardCellText" >Москва</h2>
+    </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Санкт-Петербург</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Новосибирск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Екатеринбург</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Казань</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Нижний Новгород</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Челябинск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Самара</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Омск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ростов-на-Дону</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Уфа</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Красноярск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Воронеж</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Пермь</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Волгоград</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Краснодар</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Саратов</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тюмень</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тольятти</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ижевск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Барнаул</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ульяновск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Иркутск</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Хабаровск</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ярославль</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Владивосток</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Махачкала</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Томск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Оренбург</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Кемерово</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Новокузнецк</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Рязань</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Набережные Челны</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Астрахань</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Пенза</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Киров</h2>
+  </div>
+  <div class="cardCell cellCity"  >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Липецк</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Балашиха</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Чебоксары</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Калининград</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тула</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Курск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ставрополь</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Севастополь</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Сочи</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Улан-Удэ</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тверь</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Магнитогорск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Иваново</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Брянск</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Адыгея</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Алтай</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Башкортостан</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Бурятия</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Дагестан</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Ингушетия</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Кабардино-Балкарская Республика</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Калмыкия</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Карачаево-Черкесская Республика</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Карелия</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Коми</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Крым</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Марий Эл</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Мордовия</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Саха (Якутия)</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Северная Осетия</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Татарстан</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Тыва</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Удмуртская Республика</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Республика Хакасия</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Чеченская Республика</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Чувашская Республика</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Алтайский край</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Забайкальский край</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Камчатский край</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Краснодарский край</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Красноярский край</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Пермский край</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Приморский край</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ставропольский край</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Хабаровский край</h2>
+  </div>
+
+  
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Амурская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Архангельская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Астраханская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Белгородская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Брянская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Владимирская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Волгоградская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Вологодская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Воронежская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ивановская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Иркутская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Калининградская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Калужская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Кемеровская область — Кузбасс</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Кировская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Костромская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Курганская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Курская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ленинградская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Липецкая область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Магаданская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Московская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Мурманская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Нижегородская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Новгородская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Новосибирская область</h2>
+  </div>
+  
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Омская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Оренбургская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Орловская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Пензенская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Псковская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Ростовская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Рязанская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Самарская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Саратовская область</h2>
+  </div>
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Сахалинская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Свердловская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Смоленская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тамбовская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тверская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Томская область</h2>
+  </div>
+  <div class="cardCell cellCity " >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Тульская область</h2>
+  </div>
+
+
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >	Тюменская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ульяновская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Челябинская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ярославская область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Еврейская автономная область</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ненецкий автономный округ</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ханты-Мансийский автономный округ — Югра</h2>
+  </div>
+  <div class="cardCell cellCity " >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Чукотский автономный округ</h2>
+  </div>
+  <div class="cardCell cellCity" >
+    <div class="select" ></div>
+      <h2 class="cardCellText" >Ямало-Ненецкий автономный округ</h2>
+  </div>
+</div>
+</div>
 </div>
 

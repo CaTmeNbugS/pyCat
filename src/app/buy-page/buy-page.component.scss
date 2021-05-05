@@ -31,11 +31,14 @@ input.searchInput:hover {
 .buyBlock{
   display: flex;
 }
-.filterBlock{
+.filterBlock {
   width: 300px;
   border: 3px solid #e1e1e1;
   border-radius: 10px;
   margin: 13px 20px;
+  z-index: 99;
+  background: white;
+  height: 675px;
 }
 .filterFooterName{
   padding: 15px;
@@ -74,9 +77,7 @@ input.amount:focus {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
-}
-.filterSection:hover {
-  background: white;
+  z-index: 99;
 }
 .old{
   width: 50px !important;
@@ -137,4 +138,113 @@ select{
   background: #757de854;
   cursor: pointer;
 }
-
+.card{
+  width: 510px;
+  height: 800px;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  overflow: scroll;
+  padding: 0px 5px 5px 5px;
+  margin-left: 585px;
+  margin-top: 13px;
+  border: 3px solid #e1e1e1;
+  visibility: hidden;
+  transform: translate(320px, 0px);
+  transition: .2s;
+  opacity: 0;
+}
+.cardCell {
+  padding: 15px;
+  transition:.2s ease-out;
+  display: flex;
+}
+.cardCell:hover{
+  background:#757de8;
+  border-radius: 5px;
+  cursor: pointer;
+}    
+.cardCellText{
+  font-size: 27px;
+}
+.searchBreed:hover {
+  border: 2px solid #757de8;
+}
+.searchBreed {
+  padding: 10px 15px;
+  font-size: 25px;
+  height: 24px;
+  width: 410px;
+  border-radius: 5px;
+  border: 2px solid #c3c3c3;
+  margin-bottom: 5px;
+  transition: 0.2s;
+}
+.searchBreed:focus {
+  border: 2px solid #757de8;
+  outline: none;
+  box-shadow: 0 0 10px 0px #3f51b563;
+}
+.cardIconFilter {
+  width: 50px;
+  border-radius: 50%;
+  transition: .2s;
+  height: 50px;
+  text-align: center;
+  display: inline-grid;
+  align-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.cardFooterBox{
+  display: flex;
+}
+.filterCard {
+  padding: 5px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 2px solid whitesmoke;
+  margin: 0px 3.65px;
+  transition: .2s;
+}
+.cardFilter{
+  display: flex;
+}
+.filterCard:hover {
+  border: 2px solid #757de8;
+  cursor: pointer;
+}
+.filters{
+  background: white;
+  padding-top: 5px;
+}
+.hide{
+  display: none;
+}
+.showCard{
+  visibility: visible;
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.select {
+  width: 33px;
+  align-items: center;
+  justify-content: center;
+  display: inline-grid;
+  padding-right: 10px;
+}
+.select:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 25px;
+  opacity: 0;
+  transition:.2s;
+}
+.selectedCell > .select:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 25px;
+  opacity: 1;
+}

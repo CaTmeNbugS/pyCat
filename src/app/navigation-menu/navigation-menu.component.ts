@@ -46,7 +46,6 @@ export class NavigationMenuComponent implements OnInit {
   }
   showFilterMenu() {
     const filterMenu = document.querySelector<HTMLElement>(".filterMenu");
-    const filterContainer = document.querySelector<HTMLElement>(`.filterMenuContainer`);
     filterMenu.classList.toggle('showFilter');
   }
 }
