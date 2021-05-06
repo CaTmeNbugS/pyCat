@@ -1,0 +1,96 @@
+.formContainer{
+    width: 600px;
+    height: 450px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0px #0000001a;
+}
+form{
+    padding: 25px;
+}
+.title{
+    font-size:28px;
+}
+input{
+    width: 520px;
+    height: 37px;
+    border: 2px solid #d2d2d27a;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 22px;
+    padding: 0px 15px;
+    transition: .2s;
+}
+input:hover{
+    border: 2px solid #d2d2d2;
+}
+input:focus{
+    border-bottom: 2px solid #757de8;
+    outline: none;
+}
+input{
+    &.ng-invalid.ng-touched{
+        border-bottom: 2px solid #ff7961;
+    }
+    &.ng-valid.ng-touched{
+        border-bottom: 2px solid #4caf50; 
+    }
+}
+.regBox{
+    margin: 10px 0px;
+}
+button {
+    padding: 15px 25px;
+    font-size: 20px;
+    background: #3f51b5;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: .2s;
+    overflow: hidden;
+    position: relative;
+}
+button:hover {
+    cursor: pointer;
+    background: #673ab7;
+}
+button:focus {
+    outline: none;
+}
+.buttonBox{
+    text-align: center;
+}
+button:disabled {
+    background: #d2d2d2;
+}
+button:disabled:hover {
+    background: #d2d2d2;
+    cursor: not-allowed;
+}
+.errorsBox {
+    height: 40px;
+    margin-bottom: 15px;
+}
+h2.error {
+    padding: 5px;
+    border-radius: 5px;
+    background: #ff7961;
+    position: absolute;
+    width: 540px;
+    text-align: center;
+}
+h2.login {
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+    display: inline;
+    border-bottom: 2px solid #d2d2d2;
+    transition: .3s;
+}
+h2.login:hover {
+    background: #d2d2d2;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}

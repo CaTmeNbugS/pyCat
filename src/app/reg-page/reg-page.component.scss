@@ -1,6 +1,6 @@
 .formContainer{
     width: 600px;
-    height: 800px;
+    height: 750px;
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0px #0000001a;
@@ -66,4 +66,30 @@ button:disabled {
 button:disabled:hover {
     background: #d2d2d2;
     cursor: not-allowed;
+}
+.errorsBox {
+    height: 40px;
+    margin-bottom: 15px;
+}
+h2.error {
+    padding: 5px;
+    border-radius: 5px;
+    background: #ff7961;
+    position: absolute;
+    width: 540px;
+    text-align: center;
+}
+h2.login {
+    margin-top: 5px;
+    font-size: 20px;
+    color: black;
+    display: inline;
+    border-bottom: 2px solid #d2d2d2;
+    transition: .3s;
+}
+h2.login:hover {
+    background: #d2d2d2;
+}
+a{
+    text-decoration: none;
 }

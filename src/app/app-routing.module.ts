@@ -7,6 +7,8 @@ import { FavoritePageComponent } from './favorite-page/favorite-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { BuyCatPageComponent } from './buy-cat-page/buy-cat-page.component';
 import { RegPageComponent } from './reg-page/reg-page.component';
+import { PersonalAreaPageComponent } from './personal-area-page/personal-area-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'favorite', component: FavoritePageComponent},
   {path: 'settings', component: SettingsPageComponent},
   {path: 'registration', component: RegPageComponent},
+  {path: 'login', component: LoginPageComponent},
+  {path: 'owner', component: PersonalAreaPageComponent},
   {path: 'buy/:id', component: BuyCatPageComponent},
 ];
 

@@ -1,15 +1,21 @@
 <div class="navMenuContainer">
       <div class="navMenu">
         <div class="navMainContainer">
-          <div class="navMain ripplrEffect">
-            <h2 class="name">Name</h2>
-            <span class="mail">example@xmail.com</span>
-          </div>
+          <a  routerLink="/registration">
+            <div class="btnRegister" >
+              <h2>Регистрация</h2>
+            </div>
+          </a>
+          <a routerLink="/login">
+            <div style="margin-left: 10px;" class="btnRegister btnLogin" >
+              <h2>Войти</h2>
+            </div>
+          </a>
         </div>
         <div class="hr"></div>
         <div class="navBtn">
-          <a  routerLink="/main" >
-          <div routerLinkActive="activePage" class="btn ripplrEffect">
+          <a  routerLink="/" >
+          <div routerLinkActive="activePage" [routerLinkActiveOptions]="{exact: true}" class="btn ripplrEffect">
             <div class="icon">
               <i class="fas fa-home"></i>
             </div>

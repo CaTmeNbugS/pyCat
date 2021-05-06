@@ -17,6 +17,7 @@ export class RegPageComponent implements OnInit {
       password: new FormControl('',[Validators.minLength(10), Validators.required]),
       name: new FormControl('',[Validators.required]),
       surname: new FormControl('',[Validators.required]),
+      city: new FormControl('',[Validators.required]),
     })
 
     const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");

@@ -10,18 +10,19 @@ export class NavigationMenuComponent implements OnInit {
     const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");
     buttons.forEach((btn) => {
       btn.addEventListener("mousedown", function (event) {
-        const x = event.clientX - btn.offsetLeft;
-        const y = event.clientY - btn.offsetTop;
+          const x = event.clientX - btn.offsetLeft;
+          const y = event.clientY - btn.offsetTop;
+          const ripple = document.createElement("span");
+          ripple.style.left = x + `px`;
+          ripple.style.top = y + `px`;
+          ripple.classList.add("ripple");
+          this.appendChild(ripple);
+  
+          
+         setTimeout(() => {
+             ripple.remove();
+         }, 1000);
 
-        const ripple = document.createElement("span");
-        ripple.style.left = x + `px`;
-        ripple.style.top = y + `px`;
-        ripple.classList.add("ripple");
-        this.appendChild(ripple);
-
-        setTimeout(() => {
-          ripple.remove();
-        }, 1000);
       });
     });
   }

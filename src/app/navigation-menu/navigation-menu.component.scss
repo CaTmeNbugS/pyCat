@@ -175,7 +175,8 @@ a{
   font-family: 'Comfortaa';
   }
   .navMainContainer {
-      overflow: hidden;
+    display: flex;
+    padding: 15px 10px;
   }
   .hr{
       width: 100%;
@@ -219,5 +220,32 @@ a{
     opacity: 1;
     visibility: visible;
   }
+  .btnRegister {
+    padding: 10px;
+    background: #3f51b5;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid #3f51b5;
+    transition: .3s;
+    cursor: pointer;
+}
+.btnRegister h2 {
+  font-size: 24px;
+}
+.btnLogin {
+  color: #3f51b5;
+  background: none;
+  border: 3px solid #757de8;
+}
+.btnLogin:hover {
+  background: #757de8 !important;
+  color: white !important;
+  border: 3px solid #757de8 !important;
+}
+.btnRegister:hover {
+  color: black;
+  background: none;
+  border: 3px solid #414141;
+}
 
   
