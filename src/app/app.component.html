@@ -1,2 +1,95 @@
-<app-navigation-menu></app-navigation-menu>
-<app-page></app-page>
+<div class="navMenuContainer">
+    <div class="navMenu">
+      <div class="navMainContainer">
+        <a  routerLink="/registration">
+          <div class="btnRegister" >
+            <h2>Регистрация</h2>
+          </div>
+        </a>
+        <a routerLink="/login">
+          <div style="margin-left: 10px;" class="btnRegister btnLogin" >
+            <h2>Войти</h2>
+          </div>
+        </a>
+      </div>
+      <div class="hr"></div>
+      <div class="navBtn">
+        <a  routerLink="/" >
+        <div routerLinkActive="activePage" [routerLinkActiveOptions]="{exact: true}" class="btn ripplrEffect">
+          <div class="icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="textSectionBtn">
+            <h2 class="textBtn">Главная</h2>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="navBtn">
+        <a  routerLink="/buy" >
+        <div routerLinkActive="activePage" class="btn ripplrEffect">
+          <div class="icon">
+            <i class="fas fa-cash-register"></i>
+          </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Покупка</h2>
+            </div>
+        </div>
+      </a>
+      </div>
+      <div class="navBtn">
+        <a   routerLink="/estrus" >
+        <div routerLinkActive="activePage" class="btn ripplrEffect">
+          <div class="icon">
+            <i class="fas fa-paw"></i>
+          </div>
+          <div class="textSectionBtn">
+            <h2 class="textBtn">Вязка</h2>
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="hr Hr"></div>
+      <div class="navBtn">
+        <a  routerLink="/favorite" >
+        <div routerLinkActive="activePage" routerLinkActive="activePage" class="btn ripplrEffect">
+          <div class="icon">
+            <i class="fas fa-bookmark"></i>
+          </div>
+            <div class="textSectionBtn">
+              <h2 class="textBtn">Закладки</h2>
+            </div>
+          </div>
+          </a>
+      </div>
+      <div class="hr Hr"></div>
+      <div class="navBtn">
+        <a  routerLink="/settings" >
+        <div routerLinkActive="activePage" class="btn ripplrEffect">
+          <div class="icon">
+            <i class="fas fa-cog"></i>
+          </div>
+          <div class="textSectionBtn">
+            <h2 class="textBtn">Настройки</h2>
+          </div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+  <div class="topBarContainer">
+    <div class="topBar">
+      <div class="menuContainer"  >
+        <div class="menu" (click)="showMenu()">
+          <div class="chtMenu"></div>
+          <div class="chtMenu"></div>
+          <div class="chtMenu"></div>
+        </div>
+      </div>
+      <div class="labelContainer">
+        <h2 class="label">Покупка котов и кошек</h2>
+      </div>
+    </div>
+  </div>
+  <div style="height: 60px;" ></div>
+  <router-outlet></router-outlet>

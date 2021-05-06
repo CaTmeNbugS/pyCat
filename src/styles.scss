@@ -81,6 +81,14 @@
     justify-content: right;
     width: 1910px;
 }
+app-reg-page {
+  display: grid;
+  justify-content: center;
+}
+app-login-page {
+  display: grid;
+  justify-content: center;
+}
 app-breed-menu{
   display: flex;
   align-items: center;
@@ -88,6 +96,10 @@ app-breed-menu{
   width: 1910px;
   height: 1080px;
   position: absolute;
+}
+app-favorite-page {
+  display: grid;
+  justify-content: center;
 }
   @keyframes FavoriteRipple {
     0% {
