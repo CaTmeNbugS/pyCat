@@ -72,41 +72,25 @@
     border-radius: 50%;
     position: absolute;
   }
-  app-page{
-    justify-content: center;
-    display: grid;
-  }
   app-buy-page {
     display: grid;
     justify-content: right;
     width: 1910px;
 }
-app-reg-page {
-  display: grid;
-  justify-content: center;
-}
-app-login-page {
-  display: grid;
-  justify-content: center;
-}
-app-breed-menu{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1910px;
-  height: 1080px;
-  position: absolute;
-}
-app-favorite-page {
-  display: grid;
-  justify-content: center;
-}
 main{
   position: relative;
+}
+app-personal-area-page, app-buy-cat-page, app-favorite-page, app-login-page,app-reg-page{
+  display: grid;
+  justify-content: center;
 }
 ::-webkit-scrollbar:horizontal{
   height: 0px;
 } 
+.remove{
+  display: none
+}
+  
   @keyframes FavoriteRipple {
     0% {
       width: 0px;

@@ -26,8 +26,11 @@ export class AppComponent implements OnInit {
 
 
           setTimeout(() => {
-             ripple.remove();
+             ripple.classList.add('remove');
          }, 1000);
+         setTimeout(() => {
+          ripple.remove();
+      }, 1500);
 
       });
     });
