@@ -14,6 +14,8 @@ import { RegPageComponent } from './reg-page/reg-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { BuyBlockComponent } from './buy-block/buy-block.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
   ],
   providers: [],

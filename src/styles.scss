@@ -101,6 +101,12 @@ app-favorite-page {
   display: grid;
   justify-content: center;
 }
+main{
+  position: relative;
+}
+::-webkit-scrollbar:horizontal{
+  height: 0px;
+} 
   @keyframes FavoriteRipple {
     0% {
       width: 0px;

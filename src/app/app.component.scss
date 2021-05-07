@@ -103,6 +103,7 @@ a{
     .show {
       margin-left: 0px;
       visibility: visible;
+      z-index: 9999;
     }
     .showFilter{
       visibility: visible;

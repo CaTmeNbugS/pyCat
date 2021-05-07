@@ -12,15 +12,15 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
 
 const routes: Routes = [
-  {path: '', component: MainPageComponent},
-  {path: 'buy', component: BuyPageComponent},
-  {path: 'estrus', component: EstrusPageComponent},
-  {path: 'favorite', component: FavoritePageComponent},
-  {path: 'settings', component: SettingsPageComponent},
-  {path: 'registration', component: RegPageComponent},
-  {path: 'login', component: LoginPageComponent},
-  {path: 'owner', component: PersonalAreaPageComponent},
-  {path: 'buy/:id', component: BuyCatPageComponent},
+  {path: '', component: MainPageComponent, data: {animation: '1page'}},
+  {path: 'buy', component: BuyPageComponent, data: {animation: '2page'}},
+  {path: 'estrus', component: EstrusPageComponent, data: {animation: '3page'}},
+  {path: 'favorite', component: FavoritePageComponent, data: {animation: '4page'}},
+  {path: 'settings', component: SettingsPageComponent, data: {animation: '5page'}},
+  {path: 'registration', component: RegPageComponent, data: {animation: '6page'}},
+  {path: 'login', component: LoginPageComponent, data: {animation: '7page'}},
+  {path: 'owner', component: PersonalAreaPageComponent, data: {animation: '8page'}},
+  {path: 'buy/:id', component: BuyCatPageComponent, data: {animation: '9page'}},
 ];
 
 @NgModule({
