@@ -52,23 +52,27 @@ export class BuyPageComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    const buttons = document.querySelectorAll<HTMLElement>(".ripplrEffect");
-    buttons.forEach((btn) => {
-      btn.addEventListener("mousedown", function(event) {
-        const x = event.clientX - btn.offsetLeft;
-        const y = event.clientY - btn.offsetTop;
+    const cells = document.querySelectorAll<HTMLElement>('.cardCell');
+    const card = document.querySelector<HTMLElement>('.card');
+    const btns = document.querySelectorAll<HTMLElement>('.fl_btn');
+    cells.forEach((cell) => {
+      cell.addEventListener('click', function(){
 
-        const ripple = document.createElement("span");
-        ripple.style.left = x + `px`;
-        ripple.style.top = y + `px`;
-        ripple.classList.add("ripple");
-        this.appendChild(ripple);
-
-        setTimeout(() => {
-          ripple.remove();
-        }, 1000);
-      });
+      })
     });
+    const cellsCity = document.querySelectorAll<HTMLElement>('.cellCity');
+    const btnsCity = document.querySelectorAll<HTMLElement>('.fl_c');
+    cellsCity.forEach((cell) => {
+    btnsCity[0].addEventListener('click', () => {
+      cell.classList.add('selectedCell');
+      });
+    btnsCity[1].addEventListener('click',  () => {
+        cell.classList.remove('selectedCell');
+      });
+    cell.addEventListener('click', () => {
+        cell.classList.toggle('selectedCell');
+    });
+  });
     const search = document.querySelector<HTMLElement>('.searchBreed');
     search.addEventListener('input', function(){
       const v = this.value.trim();
@@ -88,28 +92,6 @@ export class BuyPageComponent implements OnInit{
           elem.classList.remove('hide');
         });
       }
-    });
-    const cells = document.querySelectorAll<HTMLElement>('.cardCell');
-    const card = document.querySelector<HTMLElement>('.card');
-    const btns = document.querySelectorAll<HTMLElement>('.filterCard');
-    cells.forEach((cell) => {
-        btns[0].addEventListener('click', () => {
-          cell.classList.add('selectedCell');
-        });
-        btns[1].addEventListener('click', () => {
-          cell.classList.remove('selectedCell');
-        });
-        cell.addEventListener('click', (event) => {
-        if (event.path[3] === card){
-          cell.classList.toggle('selectedCell');
-        }
-        if (event.path[2] === card){
-            cell.classList.toggle('selectedCell');
-          }
-        else{
-          return;
-        }
-      });
     });
     const searchCity = document.querySelector<HTMLElement>('.searchСity');
     searchCity.addEventListener('input', function() {
@@ -131,28 +113,10 @@ export class BuyPageComponent implements OnInit{
       });
     }
   });
-    const cellsCity = document.querySelectorAll<HTMLElement>('.cellCity');
-    const btnsCity = document.querySelectorAll<HTMLElement>('.filterCity');
-    cellsCity.forEach((cell) => {
-    btnsCity[0].addEventListener('click', () => {
-      cell.classList.add('selectedCell');
-      });
-    btnsCity[1].addEventListener('click',  () => {
-        cell.classList.remove('selectedCell');
-      });
-    cell.addEventListener('click', () => {
-        cell.classList.toggle('selectedCell');
-    });
-  });
   }
-  // tslint:disable-next-line:typedef
-    showCard(){
-    const card = document.querySelector<HTMLElement>('.card');
-    card.classList.toggle('showCard');
-  }
-    showCardCity(){
-    const cardCity = document.querySelector<HTMLElement>('#city');
-    cardCity.classList.toggle('showCard');
+  showCard(num, event) {
+    console.log(event)
+    const card = document.querySelectorAll<HTMLElement>('.fl_card');
+    card[num].classList.toggle('fl_card-visible');
   }
 }
-

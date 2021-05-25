@@ -13,13 +13,13 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent, data: {animation: '1page'}},
-  {path: 'buy', component: BuyPageComponent, data: {animation: '2page'}},
-  {path: 'estrus', component: EstrusPageComponent, data: {animation: '3page'}},
-  {path: 'favorite', component: FavoritePageComponent, data: {animation: '4page'}},
-  {path: 'settings', component: SettingsPageComponent, data: {animation: '5page'}},
-  {path: 'registration', component: RegPageComponent, data: {animation: '6page'}},
-  {path: 'login', component: LoginPageComponent, data: {animation: '7page'}},
-  {path: 'owner', component: PersonalAreaPageComponent, data: {animation: '8page'}},
+  {path: 'owner', component: PersonalAreaPageComponent, data: {animation: '2page'}},
+  {path: 'buy', component: BuyPageComponent, data: {animation: '3page'}},
+  {path: 'estrus', component: EstrusPageComponent, data: {animation: '4page'}},
+  {path: 'favorite', component: FavoritePageComponent, data: {animation: '5page'}},
+  {path: 'settings', component: SettingsPageComponent, data: {animation: '6page'}},
+  {path: 'registration', component: RegPageComponent, data: {animation: '7page'}},
+  {path: 'login', component: LoginPageComponent, data: {animation: '8page'}},
   {path: 'buy/:id', component: BuyCatPageComponent, data: {animation: '9page'}},
 ];
 

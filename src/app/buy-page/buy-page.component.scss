@@ -1,83 +1,49 @@
-.container{
-    justify-content: center;
-    display: grid;
-}
 .row{
   width: 1088px;
-  display: flex;
   flex-wrap: wrap;
 }
-.searchInput:focus {
-  border: 2px solid #757de8;
+.search_interaction:focus {
+  border: 2px solid dodgerblue;
   outline: none;
+  box-shadow: 0px 0px 20px 0px #1e90ff36;
+  border-radius: 10px;
 }
-.searchInput{
+.seh_t{
+  font-size:20px
+}
+.fl_search{
   padding: 15px;
-    width: 1024px;
-    background: #f0f0f0;
-    border: 2px solid #c3c3c3;
-    border-radius: 5px;
-    font-size: 20px;
-    height: 20px;
-    transition:.2s;
+  width: 1024px;
+  height: 20px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 20px 0px #0000000d;
 }
-.search{
+.fl_search_cn{
   padding: 10px 17px;
-  display: flex;
+  width: 1058px;
 }
-input.searchInput:hover {
-  border-radius: 10px;
-}
-.buyBlock{
-  display: flex;
-}
-.filterBlock {
-  width: 300px;
-  border: 3px solid #e1e1e1;
-  border-radius: 10px;
-  margin: 13px 20px;
-  z-index: 99;
-  background: white;
-  height: 675px;
-}
-.filterFooterName{
-  padding: 15px;
+.fl_tl{
+  padding: 9px 15px;
   color: white;
-  background: #3f51b5;
+  background: dodgerblue;
   text-align: center;
-  border-radius: 9px;
+  border-radius: 5px;
 }
-.filterName{
-  font-size: 25px;
-}
-.amountBox{
+.fl_searchs{
   padding: 10px 0px;
-  display: flex;
 }
-input.amount {
+.fl_sear {
   width: 62px;
   padding: 5px 10px;
-  border: 2px solid #757de8;
-  border-radius: 10px;
-  font-size: 18px;
+  border: 2px solid lightgrey;
   height: 18px;
   margin: 0px 7px;
   transition:.2s;
+  text-align: center;
+  border-radius: 10px;
 }
-input.amount:focus {
-  border: 2px solid #3f51b5;
-  border-radius: 15px;
-  outline: none;
-}
-.amountContent {
-  display: flex;
-}
-.filterSection {
+.fl_searchs_cn {
   padding: 20px 15px 15px 15px;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 99;
 }
 .old{
   width: 50px !important;
@@ -87,18 +53,12 @@ input[type="checkbox"]{
     width: 25px;
     height: 25px;
     background: white;
-    border: 2px solid #e1e1e1;
+    border: 2px solid #d3d3d3;
     border-radius: 5px;
     transition: .2s;
 }
 input[type="checkbox"]:hover{
-  border: 2px solid #757de8;
-}
-input[type="checkbox"]:focus{
-  outline: none;
-    border-radius: 5px;
-    background: #757de840;
-    border: 2px solid #757de8;
+  border: 2px solid #1e90ff;
 }
 input[type="checkbox"]:after{
   font-family: "Font Awesome 5 Free";
@@ -109,46 +69,38 @@ input[type="checkbox"]:after{
   display: none;
 }
 input[type="checkbox"]:checked{
-  background:#757de8;
+  background:#1e90ff;
   border-radius: 5px;
-  border: 2px solid #757de8;
+  border: 2px solid #1e90ff;
 }
 input[type="checkbox"]:checked:after{
   display:block;
 }
+input[type="checkbox"]:focus {
+  border: 2px solid dodgerblue;
+  outline: none;
+}
 .checkboxPadding{
   padding: 3px;
 }
-select{
-  padding: 5px;
-  border: 2px solid #757de8;
-  border-radius: 10px;
-}
 .hr{
   height: 3px;
-  background: #e1e1e1;
+  background: #d3d3d3;
 }
-.selectBreed {
-  padding: 5px 10px;
-  border: 2px solid #757de8;
-  border-radius: 10px;
-  transition: .2s;
-}
-.selectBreed:hover {
-  background: #757de854;
-  cursor: pointer;
-}
-.card{
+
+
+
+
+
+
+.fl_card{
   width: 510px;
   height: 800px;
-  background: white;
-  border-radius: 5px;
-  position: absolute;
+  position: fixed;
   overflow: scroll;
   padding: 0px 5px 5px 5px;
   margin-left: 585px;
   margin-top: 13px;
-  border: 3px solid #e1e1e1;
   visibility: hidden;
   transform: translate(320px, 0px);
   transition: .2s;
@@ -156,19 +108,17 @@ select{
 }
 .cardCell {
   padding: 15px;
-  transition:.2s ease-out;
+  transition: 0.1s linear;
   display: flex;
 }
 .cardCell:hover{
-  background:#757de8;
+  background: #1e90ff;
   border-radius: 5px;
   cursor: pointer;
+  color: white;
 }    
 .cardCellText{
   font-size: 27px;
-}
-.searchBreed:hover {
-  border: 2px solid #757de8;
 }
 .searchBreed {
   padding: 10px 15px;
@@ -180,48 +130,10 @@ select{
   margin-bottom: 5px;
   transition: 0.2s;
 }
-.searchBreed:focus {
-  border: 2px solid #757de8;
-  outline: none;
-  box-shadow: 0 0 10px 0px #3f51b563;
-}
-.cardIconFilter {
-  width: 50px;
-  border-radius: 50%;
-  transition: .2s;
-  height: 50px;
-  text-align: center;
-  display: inline-grid;
-  align-content: center;
-  position: relative;
-  overflow: hidden;
-}
-.cardFooterBox{
-  display: flex;
-}
-.filterCard {
-  padding: 5px;
-  background: #ffffff;
-  border-radius: 5px;
-  border: 2px solid whitesmoke;
-  margin: 0px 3.65px;
-  transition: .2s;
-}
-.cardFilter{
-  display: flex;
-}
-.filterCard:hover {
-  border: 2px solid #757de8;
-  cursor: pointer;
-}
-.filters{
-  background: white;
-  padding-top: 5px;
-}
 .hide{
   display: none;
 }
-.showCard{
+.fl_card-visible{
   visibility: visible;
   transform: translate(0px, 0px);
   opacity: 1;

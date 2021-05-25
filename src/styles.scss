@@ -34,7 +34,7 @@
   border-radius: 15px;
 }
 ::selection{
-  background: #757de8;
+  background: dodgerblue;
 }
 @keyframes ripple {
     0% {
@@ -74,8 +74,14 @@
   }
   app-buy-page {
     display: grid;
-    justify-content: right;
+    justify-content: center;
     width: 1910px;
+    background: #f6f6f6;
+    z-index: 999;
+    
+}
+body{
+  background: #f6f6f6;
 }
 main{
   position: relative;
@@ -83,14 +89,90 @@ main{
 app-personal-area-page, app-buy-cat-page, app-favorite-page, app-login-page,app-reg-page{
   display: grid;
   justify-content: center;
+  z-index: 999;
 }
 ::-webkit-scrollbar:horizontal{
   height: 0px;
 } 
-.remove{
-  display: none
+.bl_frame{
+  border: 2px solid white;
+  border-radius: 5px;
+  background:white;
+} 
+.btns_b > .simple_btn{
+  margin: 10px 0px;
 }
-  
+.simple_btn {
+  border-radius: 10px;
+  background: dodgerblue;
+  transition: 0.2s;
+  box-shadow: 0 3px 0px 0px royalblue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.simple_btn:hover{
+  cursor: pointer;
+  box-shadow: 0 0px 0px 0px royalblue;
+  transform: translate(0px, 3px);
+}  
+.content{
+  border-radius: 10px;
+  border: 5px solid #ffffff;
+  box-shadow: 0px 0px 20px 0px #0000000d;
+  background: white;
+}
+.flex_item_cn{
+  display: inline-flex;
+}
+.grid_item_cn{
+  display: inline-grid;
+}
+.img_b{
+  height: 300px;
+  width: 325px;
+  overflow: hidden;
+}
+.f_block > .img_b{
+  height: 225px;
+}
+.scroll_box {
+  z-index: 99;
+  box-shadow: 0px 0px 20px 0px #0000000d;
+  position: fixed;
+  margin-left: 20px;
+}
+.contact {
+  display: flex;
+  padding: 5px 0px;
+  border-bottom: 3px solid #d2d2d2;
+}
+i {
+  font-size: 22px;
+  padding: 5px;
+}
+.contact > h2 {
+  margin-left: 35px;
+}
+.f_block {
+  border-radius: 10px;
+  border: 5px solid #ffffff;
+  box-shadow: 0px 0px 20px 0px #0000000d;
+  background: white;
+  height: 225px;
+  display: flex;
+  margin: 20px 0px;
+}
+.description{
+  padding: 10px;
+  width: 540px;
+  font-size: 18px;
+  overflow: scroll;
+}
+.ar_btn {
+  padding: 7px;
+  display: inline-grid;
+}
   @keyframes FavoriteRipple {
     0% {
       width: 0px;

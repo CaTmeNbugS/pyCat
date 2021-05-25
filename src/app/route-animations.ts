@@ -13,7 +13,9 @@ export const slider =
         transition('* => 5page', slideTo('left')),
         transition('5page => *', slideTo('right')),
         transition('* => 6page', slideTo('left')),
-        transition('6page => *', slideTo('right'))
+        transition('6page => *', slideTo('right')),
+        transition('8page => *', slideTo('left')),
+        transition('* => 8page', slideTo('right'))
     ]);
 
 function slideTo(direction){
@@ -32,10 +34,10 @@ function slideTo(direction){
         ]),
         group([
             query(':leave', [
-                animate('750ms ease', style({[direction]: '100%'}))
+                animate('200ms ease-in', style({[direction]: '0%', opacity: 0}))
             ], optional),
             query(':enter', [
-                animate('750ms ease', style({[direction]: '0%'}))
+                animate('500ms ease-out', style({[direction]: '0%',opacity: 1 }))
             ])
         ]),
     ];

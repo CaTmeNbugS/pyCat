@@ -1,108 +1,100 @@
-<div class="search" >
-  <input class="searchInput" type="text" placeholder="Поиск">
+<div class="fl_search_cn flex_item_cn" >
+  <input class="fl_search search_interaction bl_frame seh_t" type="text" placeholder="Поиск">
 </div> 
-<div class="buyBlock" >
-  <div class="row" >
+<div class="flex_item_cn" >
+  <div class="row flex_item_cn" >
     <app-buy-block
       *ngFor="let CatBlock of buyCatsArray"
       [buyCatBlock]="CatBlock"
     ></app-buy-block>
     </div>
-<div class="filterBlock" >
-  <div class="filterFooterName" >
-    <h2 style="font-size:30px" >Фильтры</h2>
-  </div>
-  <div class="filterBox" >
-    <div class="filterSection ripplrEffect" >
-      <h2 class="filterName" >Цена</h2>
-      <div class="amountBox" >
-        <div class="amountContent" >
-          <h2>от</h2>
-          <input class="amount" type="text">
-        </div>
-        <div class="amountContent">
-          <h2>до</h2>
-          <input class="amount"type="text">
-        </div>
-        <div class="amountContent">
-          <h2>₽</h2>
-        </div>
-      </div>
+<div>
+  <div style="margin-top: -64px;" class="scroll_box bl_frame" >
+    <div class="fl_tl" >
+      <h2 style="font-size:30px" >Фильтры</h2>
     </div>
-    <div class="hr" ></div>
-    <div class="filterSection ripplrEffect" >
-      <h2 class="filterName" >Пол</h2>
-      <div class="amountBox" style="justify-content: space-between;" >
-        <div class="amountContent" >
-          <div class="checkboxPadding"> 
-            <input type="checkbox" >
+    <div class="filterBox" >
+      <div class="fl_searchs_cn" >
+        <h2 >Цена</h2>
+        <div class="fl_searchs flex_item_cn" >
+          <div class="flex_item_cn" >
+            <h2>от</h2>
+            <input class="fl_sear search_interaction seh_t b_t" type="text">
           </div>
-          <h2>мальчик</h2>
-        </div>
-        <div class="amountContent">
-          <div class="checkboxPadding"> 
-            <input type="checkbox" >
+          <div class="flex_item_cn">
+            <h2>до</h2>
+            <input class="fl_sear search_interaction seh_t b_t"type="text">
           </div>
-          <h2>девочка</h2>
-        </div>
-      </div>
-    </div>
-    <div class="hr" ></div>
-    <div class="filterSection ripplrEffect" >
-      <h2 class="filterName" >Возраст</h2>
-      <div class="amountBox" >
-        <div class="amountContent" >
-          <h2>от</h2>
-          <input class="amount old " type="text">
-        </div>
-        <div class="amountContent">
-          <h2>до</h2>
-          <input class="amount old"type="text">
-        </div>
-        <div class="amountContent">
-          <h2>лет</h2>
-        </div>
-      </div>
-    </div>
-    <div class="hr" ></div>
-    <div class="filterSection ripplrEffect" >
-      <h2 class="filterName" >Порода</h2>
-      <div class="amountBox" >
-        <div class="amountContent" >
-          <div (click)="showCard()" class="selectBreed" >
-            <h2 style="font-size: 18px;" >Выбрать породу</h2>
+          <div class="flex_item_cn">
+            <h2>₽</h2>
           </div>
         </div>
       </div>
-    </div>
-    <div class="hr" ></div>
-    <div class="filterSection ripplrEffect" >
-      <h2 class="filterName" >Город / Область</h2>
-      <div class="amountBox" >
-        <div class="amountContent" >
-          <div (click)="showCardCity()" class="selectBreed" >
-            <h2 style="font-size: 18px;" >Выбрать город / регион</h2>
+      <div class="hr" ></div>
+      <div class="fl_searchs_cn" >
+        <h2 >Пол</h2>
+        <div class="fl_searchs flex_item_cn" style="justify-content: space-between;" >
+          <div class="flex_item_cn" >
+            <div class="checkboxPadding"> 
+              <input type="checkbox" >
+            </div>
+            <h2>мальчик</h2>
           </div>
+          <div class="flex_item_cn">
+            <div class="checkboxPadding"> 
+              <input type="checkbox" >
+            </div>
+            <h2>девочка</h2>
+          </div>
+        </div>
+      </div>
+      <div class="hr" ></div>
+      <div class="fl_searchs_cn" >
+        <h2>Возраст</h2>
+        <div class="fl_searchs flex_item_cn" >
+          <div class="flex_item_cn " >
+            <h2>от</h2>
+            <input class="fl_sear old search_interaction seh_t b_t" type="text">
+          </div>
+          <div class="flex_item_cn">
+            <h2>до</h2>
+            <input class="fl_sear old search_interaction seh_t b_t"type="text">
+          </div>
+          <div class="flex_item_cn">
+            <h2>лет</h2>
+          </div>
+        </div>
+      </div>
+      <div class="hr" ></div>
+      <div class="fl_searchs_cn" >
+        <h2 >Порода</h2>
+        <div class="fl_searchs" >
+            <div (click)="showCard(0 , $event)" class="simple_btn" >
+              <h2 class="seh_t" >Выбрать породу</h2>
+            </div>
+        </div>
+      </div>
+      <div class="hr" ></div>
+      <div class="fl_searchs_cn" >
+        <h2 >Город / Область</h2>
+        <div class="fl_searchs" >
+            <div (click)="showCard(1 , $event)" class="simple_btn" >
+              <h2 style="font-size:18px;" >Выбрать город / регион</h2>
+            </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="card" >
+</div>    
+
+<div class="fl_card bl_frame" >
   <div class="filters" >
-      <div class="cardFooterBox" >
-          <input class="searchBreed" type="text" placeholder="Поиск" >
-          <div style="margin-left: 5px;" class="cardIconFilterBox" >
-              <div class="cardIconFilter" >
-                  <i style="font-size: 30px;" class="fas fa-bars"></i>
-              </div>
-          </div>
-      </div>
-      <div class="cardFilter" >
-          <div class="filterCard" >
+          <input class="searchBreed search_interaction" type="text" placeholder="Поиск" >
+      <div class="flex_item_cn" >
+          <div class="fl_btn b_t" >
               <h2>Выбрать все</h2>
           </div>
-          <div class="filterCard" >
+          <div class="fl_btn b_t" >
               <h2>Убрать выбор со всего</h2>
           </div>
       </div>
@@ -455,21 +447,14 @@
   </div>
 </div>
 </div>
-<div class="card" id="city" >
+<div class="fl_card bl_frame" id="city" >
   <div class="filters" >
-      <div class="cardFooterBox" >
-          <input class="searchBreed searchСity" type="text" placeholder="Поиск" >
-          <div style="margin-left: 5px;" class="cardIconFilterBox" >
-              <div class="cardIconFilter" >
-                  <i style="font-size: 30px;" class="fas fa-bars"></i>
-              </div>
-          </div>
-      </div>
-      <div class="cardFilter" >
-          <div class="filterCard filterCity" >
+          <input class="searchBreed search_interaction searchСity" type="text" placeholder="Поиск" >
+      <div class="flex_item_cn" >
+          <div class="fl_btn fl_c b_t" >
               <h2>Выбрать все</h2>
           </div>
-          <div class="filterCard filterCity" >
+          <div class="fl_btn fl_c b_t" >
               <h2>Убрать выбор со всего</h2>
           </div>
       </div>
