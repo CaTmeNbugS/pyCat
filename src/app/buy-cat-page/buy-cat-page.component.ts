@@ -10,6 +10,12 @@ export class BuyCatPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const f_btns = document.querySelectorAll<HTMLElement>('.fa-bookmark');
+    f_btns.forEach((f_btn) => {
+      f_btn.addEventListener('click', () => {
+        f_btn.classList.toggle('disable')
+      })
+    })
   }
 
 }

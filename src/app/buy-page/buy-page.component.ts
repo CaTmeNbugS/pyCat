@@ -73,46 +73,46 @@ export class BuyPageComponent implements OnInit{
         cell.classList.toggle('selectedCell');
     });
   });
-    const search = document.querySelector<HTMLElement>('.searchBreed');
-    search.addEventListener('input', function(){
-      const v = this.value.trim();
-      const breedblocks = document.querySelectorAll('.cardCell');
-      if (v !== ''){
-        breedblocks.forEach((elem) => {
-          if ( elem.innerText.search(v) === -1){
-            elem.classList.add('hide');
-          }
-          else{
-              elem.classList.remove('hide');
-          }
-        });
-      }
-      else{
-        breedblocks.forEach((elem) => {
-          elem.classList.remove('hide');
-        });
-      }
-    });
-    const searchCity = document.querySelector<HTMLElement>('.searchСity');
-    searchCity.addEventListener('input', function() {
-    const vCity = this.value.trim();
-    const breedblocks = document.querySelectorAll('.cardCell');
-    if (vCity !== ''){
-      breedblocks.forEach((elem) => {
-        if ( elem.innerText.search(vCity) === -1){
-          elem.classList.add('hide');
-        }
-        else{
-            elem.classList.remove('hide');
-        }
-      });
-    }
-    else{
-      breedblocks.forEach((elem) => {
-        elem.classList.remove('hide');
-      });
-    }
-  });
+  //   const search = document.querySelector<HTMLElement>('.searchBreed');
+  //   search.addEventListener('input', function(){
+  //     const v = this.value.trim();
+  //     const breedblocks = document.querySelectorAll('.cardCell');
+  //     if (v !== ''){
+  //       breedblocks.forEach((elem) => {
+  //         if ( elem.innerText.search(v) === -1){
+  //           elem.classList.add('hide');
+  //         }
+  //         else{
+  //             elem.classList.remove('hide');
+  //         }
+  //       });
+  //     }
+  //     else{
+  //       breedblocks.forEach((elem) => {
+  //         elem.classList.remove('hide');
+  //       });
+  //     }
+  //   });
+  //   const searchCity = document.querySelector<HTMLElement>('.searchСity');
+  //   searchCity.addEventListener('input', function() {
+  //   const vCity = this.value.trim();
+  //   const breedblocks = document.querySelectorAll('.cardCell');
+  //   if (vCity !== ''){
+  //     breedblocks.forEach((elem) => {
+  //       if ( elem.innerText.search(vCity) === -1){
+  //         elem.classList.add('hide');
+  //       }
+  //       else{
+  //           elem.classList.remove('hide');
+  //       }
+  //     });
+  //   }
+  //   else{
+  //     breedblocks.forEach((elem) => {
+  //       elem.classList.remove('hide');
+  //     });
+  //   }
+  // });
   }
   showCard(num, event) {
     console.log(event)

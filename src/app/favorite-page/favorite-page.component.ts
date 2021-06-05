@@ -11,31 +11,12 @@ export class FavoritePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-    
-    const favoriteIcon = document.querySelectorAll<HTMLElement>(".favorite");
-    favoriteIcon.forEach((favorite) => {
-      favorite.addEventListener("click", () =>{
-        favorite.classList.toggle("fas");
-        favorite.classList.toggle("far");
+    const f_btns = document.querySelectorAll<HTMLElement>('.fa-bookmark');
+    f_btns.forEach((f_btn) => {
+      f_btn.addEventListener('click', (event) => {
+        f_btn.classList.toggle('disable')
+        console.log(event)
       })
-    });
-    const buttons = document.querySelectorAll<HTMLElement>(".rippleFavoriteEffect");
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", function (event) {
-        let x = event.clientX - btn.offsetLeft;
-        let y = event.clientY - btn.offsetTop;
-
-        let ripple = document.createElement("span");
-        ripple.style.left = x + `px`;
-        ripple.style.top = y + `px`;
-        ripple.classList.add("FavoriteRipple");
-        this.appendChild(ripple);
-
-        setTimeout(() => {
-          ripple.remove();
-        }, 1000);
-      });
     })
   }
   
