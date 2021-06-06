@@ -1,25 +1,15 @@
-<div class="formContainer" >
+<div class="loginContainer formContainer content " >
     <form>
         <div class="regBox">
             <h2 class="title">Почта</h2>
-            <input type="email"> 
+            <input class="search_interaction regPut" type="email"> 
         </div>
         <div class="regBox" >
             <h2 class="title">Пароль</h2>
-            <input type="text"> 
-        </div>
-        <div class="errorsBox" >
-            <div class="errorBlock" >
-                <div *ngIf="false">
-                    <h2 class="error" *ngIf="false">Неправильная почта</h2>
-                </div>
-                <div *ngIf="false">
-                    <h2 class="error" *ngIf="false">Неправильнйы пароль</h2>
-                </div>
-            </div>
+            <input class="search_interaction regPut" type="text"> 
         </div>
         <div class="buttonBox " >
-            <button class="ripplrEffect" type="submit"><h2>Войти</h2></button>
+            <button class="buttonMit"><h2>Войти</h2></button>
             <p style="margin-top: 5px;">Нет аккаунта?</p>
             <a  routerLink="/registration">
                 <div style="position: absolute;width: 550px;">

@@ -25,6 +25,10 @@
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+a{
+  text-decoration: none;
+}
 ::-webkit-scrollbar {
   background: none;
   width: 10px;
@@ -50,6 +54,71 @@ app-personal-area-page, app-buy-cat-page, app-favorite-page, app-login-page,app-
 ::-webkit-scrollbar:horizontal{
   height: 0px;
 } 
+form{
+  padding: 25px;
+}
+.formContainer{
+  width: 600px;
+  margin-top: 20px;
+}
+.regBox{
+  margin: 10px 0px;
+}
+.title{
+  font-size:28px;
+}
+.regPut{
+  width: 520px;
+  height: 37px;
+  border: 2px solid #d2d2d27a;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 22px;
+  padding: 0px 15px;
+  transition: .2s;
+}
+.regPut:hover{
+  border: 2px solid #d2d2d2;
+}
+h2.login {
+  margin-top: 5px;
+  font-size: 20px;
+  color: black;
+  display: inline;
+  border-bottom: 2px solid #d2d2d2;
+  transition: .3s;
+} 
+h2.login:hover {
+  background: #d2d2d2;
+}
+.buttonMit {
+  padding: 15px 25px;
+  font-size: 20px;
+  background: dodgerblue;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: .2s;
+  overflow: hidden;
+  position: relative;
+}
+.buttonMit:hover {
+  cursor: pointer;
+  background: royalblue;
+}
+.buttonMit:focus {
+  outline: none;
+}
+.buttonBox{
+  text-align: center;
+}
+.buttonMit:disabled {
+  background: #d2d2d2;
+}
+.buttonMit:disabled:hover {
+  background: #d2d2d2;
+  cursor: not-allowed;
+}
 .bl_frame{
   border: 2px solid white;
   border-radius: 5px;
@@ -57,6 +126,12 @@ app-personal-area-page, app-buy-cat-page, app-favorite-page, app-login-page,app-
 } 
 .btns_b > .simple_btn{
   margin: 10px 0px;
+}
+.search_interaction:focus {
+  border: 2px solid dodgerblue !important ;
+  outline: none;
+  box-shadow: 0px 0px 20px 0px #1e90ff36;
+  border-radius: 10px;
 }
 .simple_btn {
   border-radius: 10px;

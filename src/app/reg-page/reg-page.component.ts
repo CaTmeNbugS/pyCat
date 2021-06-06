@@ -1,10 +1,23 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reg-page',
   templateUrl: './reg-page.component.html',
-  styleUrls: ['./reg-page.component.scss']
+  styleUrls: ['./reg-page.component.scss'],
+  animations: [
+    trigger('error', [
+      transition('void => *', [
+        style({opacity:0}),
+        animate('.2s ease-out')
+      ]),
+      transition('* => void', [
+        style({opacity:1}),
+        animate('.1s ease-in', style({opacity:0}))
+      ])
+    ])
+  ]
 })
 export class RegPageComponent implements OnInit {
   form: FormGroup;
