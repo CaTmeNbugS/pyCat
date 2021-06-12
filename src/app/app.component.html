@@ -1,5 +1,5 @@
 <div class="nv_bar_psn" >
-  <div class="nv_bar" >
+  <div [@side_bar]='side_bar_state' class="nv_bar" >
     <div class="nv_bar_link" style="padding-top: 15px;max-width: 60px;" >
       <div class="nv_link_btn" style="display: block;height: 35px;" (click)="spreadMenu()" >
         <div class="menu" ></div>
@@ -14,7 +14,7 @@
               <div class="icon">
                 <i class="fas fa-home"></i>
               </div>
-              <div *ngIf="spreadM" class="nv_btn_text" >
+              <div [@nv_text]='btn_text_state' class="nv_btn_text" >
                 <h2>Главная</h2>
               </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="icon">
                   <i class="fas fa-user"></i>
                 </div>
-                <div *ngIf="spreadM" class="nv_btn_text" >
+                <div [@nv_text]='btn_text_state'  class="nv_btn_text" >
                   <h2>Профиль</h2>
                 </div>
               </div>
@@ -38,7 +38,7 @@
                 <div class="icon">
                   <i class="fas fa-cash-register"></i>
                 </div>
-                <div *ngIf="spreadM" class="nv_btn_text" >
+                <div [@nv_text]='btn_text_state' class="nv_btn_text" >
                   <h2>Покупка</h2>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                   <div class="icon">
                     <i class="fas fa-paw"></i>
                   </div>
-                  <div *ngIf="spreadM" class="nv_btn_text" >
+                  <div [@nv_text]='btn_text_state' class="nv_btn_text" >
                     <h2>Вязка</h2>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
                     <div class="icon">
                       <i class="fas fa-bookmark"></i>
                     </div>
-                    <div *ngIf="spreadM" class="nv_btn_text" >
+                    <div [@nv_text]='btn_text_state'  class="nv_btn_text" >
                       <h2>Закладки</h2>
                     </div>
                   </div>
@@ -74,7 +74,7 @@
                       <div class="icon">
                         <i class="fas fa-cog"></i>
                       </div>
-                      <div *ngIf="spreadM" class="nv_btn_text" >
+                      <div [@nv_text]='btn_text_state' class="nv_btn_text" >
                         <h2>Настройки</h2>
                       </div>
                     </div>

@@ -126,6 +126,17 @@ h2.login:hover {
 } 
 .btns_b > .simple_btn{
   margin: 10px 0px;
+  background: whitesmoke;
+  color: black;
+  box-shadow: none;
+  }
+  .btns_b >  .simple_btn:hover {
+    cursor: pointer;
+    background: #8080802e;
+    transform: none;
+}
+.ar_btn > h2 {
+  font-size: 30px;
 }
 .search_interaction:focus {
   border: 2px solid dodgerblue !important ;
@@ -206,7 +217,6 @@ i {
 }
 .ar_btn {
   padding: 7px;
-  border: 2px solid dodgerblue;
   background: none !important;
   display: inline-flex !important;
   width: auto !important;
