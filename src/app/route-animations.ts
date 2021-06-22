@@ -15,7 +15,9 @@ export const slider =
         transition('* => 6page', slideTo('left')),
         transition('6page => *', slideTo('right')),
         transition('8page => *', slideTo('left')),
-        transition('* => 8page', slideTo('right'))
+        transition('* => 8page', slideTo('right')),
+        transition('9page => *', slideTo('left')),
+        transition('* => 9page', slideTo('right')),
     ]);
 
 function slideTo(direction){

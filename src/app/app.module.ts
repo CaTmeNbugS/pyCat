@@ -15,6 +15,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { BuyBlockComponent } from './buy-block/buy-block.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdFormComponent } from './ad-form/ad-form.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegPageComponent,
     LoginPageComponent,
     BuyBlockComponent,
+    AdFormComponent,
   ],
   imports: [
     BrowserModule,
