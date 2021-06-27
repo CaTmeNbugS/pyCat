@@ -1,7 +1,9 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { rippleEffect } from '../scripts';
+import { RegisterResponse, rippleEffect } from '../scripts';
 
 @Component({
   selector: 'app-reg',
@@ -29,7 +31,7 @@ export class RegComponent implements OnInit {
   password: String;
   city: String;
 
-  constructor() { }
+  constructor(private router: Router,private authService: AuthService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -44,6 +46,25 @@ export class RegComponent implements OnInit {
   }
 
   user_reg(){
-      console.log(this.name);
+      const user = {
+        name: this.name,
+        email: this.email,
+        last_name: this.last_name,
+        password: this.password,
+        city: this.city,
+      }
+
+
+      this.authService.submitUser(user).subscribe((data: RegisterResponse) => {
+
+
+        if(!data.success){
+          console.log("Неполучилось");
+          this.router.navigate(['/registration'])
+        } else{
+          console.log("Получилось");
+          this.router.navigate(['/auth'])
+        }
+      });
   }
 }

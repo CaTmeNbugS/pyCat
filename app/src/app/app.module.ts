@@ -14,6 +14,10 @@ import { BuyComponent } from './buy/buy.component';
 import { BuyBlockComponent } from './buy-block/buy-block.component';
 import { FormComponent } from './form/form.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AuthService } from './auth.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -34,8 +38,9 @@ import { SettingsComponent } from './settings/settings.component';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

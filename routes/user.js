@@ -14,17 +14,18 @@ router.post('/registration', function(req, res){
         city:  req.body.city,
     });
     User.add_user(new_user, function(err, user){
-        if(err)
+        if(err) {
             res.json({success:false, msg:"Пу-пу-пу ОшЫбкА"});
-        else
+         } else {
             res.json({success:true, msg:"Все Четко"});
-    }); 
+         }   
+        }); 
 });
 router.post('/login', function(req, res){
-    const login = req.body.login;
+    const email = req.body.email;
     const password = req.body.password;
 
-    User.getUserByLogin(login, function(err, user){
+    User.getUserByLogin(email, function(err, user){
         if(err) throw err;
         if(!user){
             return res.json({success:false, msg:'НиТ такого!'});
@@ -34,10 +35,10 @@ router.post('/login', function(req, res){
             if(err) throw err;
             if(isMatch){
                 const token = jwt.sign(user, config.secret, {
-                    expiresIn: 3600 * 24
+                    expiresIn: 3600 * 24 * 24
                 });
 
-                res.json({success:true, token: 'JWT'+ token , user: {id: user._id,name: user.name, last_name: user.last_name, email: user.email, city: user.city, login: user.login} })
+                res.json({success:true, token: 'JWT'+ token , user: {id: user._id,name: user.name, last_name: user.last_name, email: user.email, city: user.city} })
             }else{
                 return res.json({success:false, msg:'Не такой пароль'});
             }   

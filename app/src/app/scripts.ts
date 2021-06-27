@@ -16,4 +16,9 @@ export function rippleEffect(btns){
             }
         )
     })
+};
+
+export class RegisterResponse{
+    public success: boolean;
+    public msg: string;
 }
