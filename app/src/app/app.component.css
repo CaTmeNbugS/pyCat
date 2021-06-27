@@ -1,0 +1,54 @@
+.nv_bar_psn {
+  position: fixed;
+  height: 100%;
+  z-index: 9999;
+}
+.nv_bar {
+  height: 100%;
+  background: white;
+  box-shadow: 0px 0px 20px 0px #0000000d;
+  overflow: hidden;
+}
+.nv_bar_link {
+  padding: 10px;
+}
+.nv_link_btn {
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.2s linear;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+}
+i {
+  font-size: 27px;
+}
+.menu {
+  background: black;
+  height: 5px;
+  border-radius: 15px;
+  margin: 5px 7.5px;
+  width: 35px;
+}
+.nv_link_btn:hover {
+  background: #d3d3d36e;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.nv_route_pg {
+  background: #5863f8 !important;
+  color: white;
+}
+.nv_btn_text {
+  margin-left: 70px;
+  align-self: center;
+}

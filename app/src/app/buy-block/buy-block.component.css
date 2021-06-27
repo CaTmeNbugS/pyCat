@@ -1,0 +1,39 @@
+.block{
+    width: 325px;
+    height: 350px;
+    margin: 13.5px 13.5px;
+    }
+    .block:hover .second_btn{
+      background: none;
+      border: 2px solid #ebebeb;
+    }
+    .block:hover{
+      cursor: pointer;
+    }
+    .blockBottomBarContainer {
+      height: 50px;
+      background: #ffffff;
+    }
+    .blockBottomBar {
+      padding: 10px;
+      height: 30px;
+      display: flex;
+    }
+    .priceText{
+      font-style: italic;
+    font-family: 'Open Sans';
+    }
+    .catName{
+      width: 200px;
+      font-family: 'Inter';
+    }
+    .priceTextValue{
+      font-size: 15px;
+      margin-top: 10px;
+      font-style: italic;
+      font-family: 'Inter';
+    }
+    a{
+      text-decoration:none;
+      color: black;
+    }

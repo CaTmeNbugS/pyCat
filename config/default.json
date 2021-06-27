@@ -1,4 +1,0 @@
-{
-    "port": 3080,
-    "DBURL": "mongodb+srv://catmen:X49JZqVtOMLt7UUR@cat.b3voc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-}

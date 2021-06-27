@@ -1,0 +1,64 @@
+<div class="nv_bar_psn" >
+  <div [@side_bar]='side_bar_state' class="nv_bar" >
+    <div class="nv_bar_link" style="padding-top: 15px;max-width: 60px;" >
+      <div class="nv_link_btn" style="display: block;height: 35px;" (click)="spreadMenu()" >
+        <div class="menu" ></div>
+        <div class="menu" ></div>
+        <div class="menu" ></div>
+      </div>
+    </div>
+
+      <div class="nv_bar_link" style="padding-top: 18px;" >
+        <a  routerLink="/" >
+        <div class="nv_link_btn r_btn" routerLinkActive="nv_route_pg" [routerLinkActiveOptions]="{exact: true}" >
+              <div class="icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div [@nv_text]='btn_text_state' class="nv_btn_text" >
+                <h2>Главная</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="nv_bar_link" >
+          <a  routerLink="/user" >
+          <div class="nv_link_btn r_btn" routerLinkActive="nv_route_pg" >
+                <div class="icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div [@nv_text]='btn_text_state'  class="nv_btn_text" >
+                  <h2>Профиль</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+            <div class="nv_bar_link" >
+              <a  routerLink="/favorite" >
+              <div class="nv_link_btn r_btn" routerLinkActive="nv_route_pg" >
+                    <div class="icon">
+                      <i class="fas fa-bookmark"></i>
+                    </div>
+                    <div [@nv_text]='btn_text_state'  class="nv_btn_text" >
+                      <h2>Закладки</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="nv_bar_link" >
+                <a  routerLink="/settings" >
+                <div class="nv_link_btn r_btn" routerLinkActive="nv_route_pg" >
+                      <div class="icon">
+                        <i class="fas fa-cog"></i>
+                      </div>
+                      <div [@nv_text]='btn_text_state' class="nv_btn_text" >
+                        <h2>Настройки</h2>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+    </div>
+  </div>
+<main [@routeAnimations]="prepareRoute(outlet)"  >
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+
