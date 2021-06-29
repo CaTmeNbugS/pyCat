@@ -24,45 +24,37 @@ import { RegisterResponse, rippleEffect } from '../scripts';
 })
 export class RegComponent implements OnInit {
 
-  form: FormGroup;
-  name: String;
-  last_name: String;
-  email: String;
-  password: String;
-  city: String;
+
+  form = new FormGroup({
+    name: new FormControl('',[Validators.required]),
+    surname: new FormControl(''),
+    email: new FormControl('',[Validators.email, Validators.required]),
+    password: new FormControl('',[Validators.minLength(10), Validators.required]),
+    city: new FormControl(''),
+  })
 
   constructor(private router: Router,private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      email: new FormControl('',[Validators.email, Validators.required]),
-      password: new FormControl('',[Validators.minLength(10), Validators.required]),
-      name: new FormControl('',[Validators.required]),
-      surname: new FormControl('',[Validators.required]),
-      city: new FormControl('',[Validators.required]),
-    });
     const r_btn = document.querySelectorAll('.r_btn');
     rippleEffect(r_btn);
   }
-
   user_reg(){
       const user = {
-        name: this.name,
-        email: this.email,
-        last_name: this.last_name,
-        password: this.password,
-        city: this.city,
+        name: this.form.value.name,
+        email:this.form.value.email,
+        last_name:this.form.value.surname,
+        password:this.form.value.password,
+        city:this.form.value.city,
       }
 
-
       this.authService.submitUser(user).subscribe((data: RegisterResponse) => {
-
 
         if(!data.success){
           console.log("Неполучилось");
           this.router.navigate(['/registration'])
         } else{
-          console.log("Получилось");
+          console.log("Получилось", user);
           this.router.navigate(['/auth'])
         }
       });
