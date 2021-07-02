@@ -11,12 +11,12 @@ import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, data: {animation: '1page'}},
-  {path: 'user', component: UserComponent, data: {animation: '2page'}},
+  {path: 'owner', component: UserComponent, data: {animation: '2page'}},
   {path: 'adform', component: FormComponent, data: {animation: '3page'}},
   {path: 'favorite', component: FavoriteComponent, data: {animation: '4page'}},
   {path: 'settings', component: SettingsComponent, data: {animation: '5page'}},
-  {path: 'registration', component: RegComponent, data: {animation: '6page'}},
-  {path: 'auth', component: AuthComponent, data: {animation: '7page'}},
+  {path: 'owner/registration', component: RegComponent, data: {animation: '6page'}},
+  {path: 'owner/auth', component: AuthComponent, data: {animation: '7page'}},
   {path: 'buy/:id', component: BuyComponent, data: {animation: '8page'}},
 ];
 

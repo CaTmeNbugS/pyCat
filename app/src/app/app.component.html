@@ -21,7 +21,7 @@
           </a>
         </div>
         <div class="nv_bar_link" >
-          <a  routerLink="/user" >
+          <a  routerLink="/owner" >
           <div class="nv_link_btn r_btn" routerLinkActive="nv_route_pg" >
                 <div class="icon">
                   <i class="fas fa-user"></i>
@@ -57,8 +57,10 @@
                   </a>
                 </div>
     </div>
+
   </div>
+  <flash-messages ></flash-messages>
 <main [@routeAnimations]="prepareRoute(outlet)"  >
     <router-outlet #outlet="outlet"></router-outlet>
-  </main>
+</main>
 

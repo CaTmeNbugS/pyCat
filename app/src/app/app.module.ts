@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     BuyComponent,
     BuyBlockComponent,
     FormComponent,
-    SettingsComponent
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FlashMessagesModule.forRoot(),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

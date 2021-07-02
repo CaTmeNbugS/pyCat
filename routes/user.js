@@ -21,7 +21,7 @@ router.post('/registration', function(req, res){
          }   
         }); 
 });
-router.post('/login', function(req, res){
+router.post('/auth', function(req, res){
     const email = req.body.email;
     const password = req.body.password;
 

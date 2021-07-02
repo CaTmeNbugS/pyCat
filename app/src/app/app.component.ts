@@ -16,15 +16,23 @@ import { rippleEffect } from './scripts';
       transition('n_spr => spr', animate('.2s ease-out')
       ),
       transition('spr => n_spr', animate('.2s ease-out')),
-
     ]),
     trigger('nv_text',[
       state('hidden', style({opacity: 0, visibility: 'hidden'})),
       state('visible', style({opacity: 1, visibility: 'visible' })),
       transition('hidden => visible', animate('.1s')),
       transition('visible => hidden', animate('.1s')),
-
-    ])
+    ]),
+    trigger('alert',[
+      transition('void => *', [
+        style({opacity:0}),
+        animate('.2s ease-out')
+      ]),
+      transition('* => void', [
+        style({opacity:1}),
+        animate('.1s ease-in', style({opacity:0}))
+      ])
+    ]),
   ]
 })
 export class AppComponent implements OnInit{

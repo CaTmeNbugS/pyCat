@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const path = require('path');
 const config = require('./config/data_base');
-const owner= require('./routes/user')
+const user = require('./routes/user')
 
 const app = express();
 const port = 3000;
@@ -36,7 +36,7 @@ app.get('/', function(req, res){
 app.get('/owner', passport.authenticate('jwt', {session: false}) , function(req, res){
     res.send('Овгнер')
 });
-app.use('/owner', owner);
+app.use('/owner', user);
 
 app.listen(port, function() {
     console.log("Сервак на порте: " + port);

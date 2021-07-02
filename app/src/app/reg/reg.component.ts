@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisterResponse, rippleEffect } from '../scripts';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-reg',
@@ -33,7 +34,11 @@ export class RegComponent implements OnInit {
     city: new FormControl(''),
   })
 
-  constructor(private router: Router,private authService: AuthService) { }
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private flashMsg: FlashMessagesService,
+    ) { }
 
   ngOnInit(): void {
     const r_btn = document.querySelectorAll('.r_btn');
@@ -47,15 +52,15 @@ export class RegComponent implements OnInit {
         password:this.form.value.password,
         city:this.form.value.city,
       }
-
+      const alert_text = '<h2 class="alert_text" >Вы зарегестрировались как ' + user.name + '</h2>'
       this.authService.submitUser(user).subscribe((data: RegisterResponse) => {
 
         if(!data.success){
-          console.log("Неполучилось");
-          this.router.navigate(['/registration'])
+          this.flashMsg.show('Ошибка регистрации', {cssClass: 'alert', timeout: 5000})
+          this.router.navigate(['/owner/registration'])
         } else{
-          console.log("Получилось", user);
-          this.router.navigate(['/auth'])
+          this.flashMsg.show(alert_text, {cssClass: 'alert', closeOnClick: true, timeout: 7000})
+          this.router.navigate(['/owner/auth'])
         }
       });
   }

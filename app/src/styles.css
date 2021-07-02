@@ -277,3 +277,29 @@ i {
       opacity: 0;
     }
 }
+.alert {
+  width: 1920px;
+  margin-left: -15px;
+  display: grid;
+  justify-content: right;
+  margin-top: 15px;
+}
+.alert_text{
+  padding: 25px;
+  font-size: 20px;
+  background: white;
+  border-radius: 10px;
+  border-right: 10px solid #5863f8;
+  box-shadow: 0 0 20px 0px #00000014;
+  transition: .2s ease-out;
+}
+.alert_text:hover {
+  border-right: 0px solid white;
+}
+.alert_text .error_alert{
+  border-right: 10px solid #ff652c;
+}
+#flashMessages {
+  position: fixed;
+  z-index: 9999;
+}
