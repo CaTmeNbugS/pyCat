@@ -20,7 +20,7 @@ a{
   background: #5863F8;
 }
 body{
-  background: #f6f6f6;
+  background: var(--background);
 }
 main{
   position: relative;
@@ -65,16 +65,17 @@ form{
 .regPut{
   width: 520px;
   height: 37px;
-  border: 2px solid #EBEBEB;
+  border: 2px solid var(--input_background);
   border-radius: 5px;
   margin-top: 10px;
   font-size: 22px;
   padding: 0px 15px;
   transition: .2s;
-  background: #EBEBEB;
+  background: var(--input_background);
+  color: var(--text_color);
 }
 .regPut:hover{
-  border: 2px solid #ebebeb;
+  border: 2px solid var(--input_background);
   background: none;
 }
 .regPut:focus{
@@ -84,28 +85,28 @@ form{
 h2.login {
   margin-top: 5px;
   font-size: 20px;
-  color: black;
+  color: var(--text_color);
   display: inline;
-  border-bottom: 2px solid #ebebeb;
+  border-bottom: 2px solid var(--input_background);
   transition: .3s;
 } 
 h2.login:hover {
-  background: #ebebeb;
+  background: var(--input_background);
 }
 .buttonMit {
   padding: 15px 25px;
   font-size: 20px;
-  background: #5863F8;
+  background: var(--button_background);
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--button_color);
   transition: .2s;
   overflow: hidden;
   position: relative;
 }
 .buttonMit:hover {
   cursor: pointer;
-  background: #0D85F4;
+  background: var(--button_background_hover);
 }
 .buttonMit:focus {
   outline: none;
@@ -114,26 +115,26 @@ h2.login:hover {
   text-align: center;
 }
 .buttonMit:disabled {
-  background: #d2d2d2;
+  background: var(--button_disabled_background);
 }
 .buttonMit:disabled:hover {
-  background: #d2d2d2;
+  background: var(--button_disabled_background);
   cursor: not-allowed;
 }
 .bl_frame{
-  border: 2px solid white;
+  border: 2px solid var(--content_border_color);
   border-radius: 10px;
-  background:white;
+  background:var(--content_background);
 } 
 .btns_b > .simple_btn{
   margin: 10px 0px;
-  background: whitesmoke;
-  color: black;
+  background: var(--button_background2);
+  color: var(--button_color2);
   box-shadow: none;
   }
   .btns_b >  .simple_btn:hover {
     cursor: pointer;
-    background: #8080802e;
+    background: var(--button_background2_hover);
     transform: none;
 }
 .ar_btn > h2 {
@@ -141,26 +142,27 @@ h2.login:hover {
 }
 .search_interaction:focus {
   outline: none;
-  border: 2px solid #5863f8 !important;
-  box-shadow: 0px 0px 20px 0px #5863f836;
+  border: 2px solid var(--button_background) !important;
+  box-shadow: 0px 0px 20px 0px var(--search_shadow);
 }
 .simple_btn {
   border-radius: 10px;
-  background: #5863F8;
+  background: var(--button_background);
   transition: 0.2s;
-  color: white;
+  color: var(--button_color);
   padding: 10px;
   text-align: center;
   cursor: pointer;
 }
 .simple_btn:hover{
-  background:#0D85F4;
+  background:var(--button_background_hover);
 
 }  
 .content{
   border-radius: 10px;
-  border: 5px solid #ffffff;
-  background: white;
+  border: 5px solid var(--content_border_color);
+  background: var(--content_background);
+  color: var(--text_color);
 }
 .flex_item_cn{
   display: inline-flex;
@@ -180,11 +182,12 @@ h2.login:hover {
   z-index: 99;
   position: fixed;
   margin-left: 20px;
+  color: var(--text_color);
 }
 .contact {
   display: flex;
   padding: 5px 0px;
-  border-bottom: 3px solid #EBEBEB;
+  border-bottom: 3px solid var(--input_background);
 }
 i {
   font-size: 22px;
@@ -199,16 +202,13 @@ i {
 }
 .f_block {
   border-radius: 10px;
-  border: 5px solid #ffffff;
-  box-shadow: 0px 0px 20px 0px #0000000d;
-  background: white;
+  border: 5px solid var(--content_border_color);
+  background: var(--content_background);
   height: 225px;
   display: flex;
   margin: 20px 0px;
   transition: .2s ease-out;
-}
-.f_block:hover {
-  box-shadow: 0px 0px 20px 0px #0000002e;
+  color: var(--text_color);
 }
 .description{
   padding: 10px;
@@ -225,27 +225,26 @@ i {
 .second_btn{
   width: 100px;
   border-radius: 10px;
-  background: #ebebeb;
+  background: var(--input_background);
   display: flex;
   transition: 0.2s linear;
   justify-content: center;
   align-self: center;
-  border: 2px solid #ebebeb;
+  border: 2px solid var(--input_background);
 }
 .disable {
-  border: 3px solid dodgerblue;
   background: none !important;
-  color: black !important;
+  color: var(--text_color) !important;
 }
 .hr{
   height: 3px;
-  background: #EBEBEB;
+  background: var(--input_background);
 }
 .ripple{
   z-index: 0;
   opacity: 0;
   position: absolute;
-  background: #ffffff50;
+  background: var(--ripple_background);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: 1250ms ripple ;
@@ -287,14 +286,14 @@ i {
 .alert_text{
   padding: 25px;
   font-size: 20px;
-  background: white;
+  background: var(--content_background);
   border-radius: 10px;
-  border-right: 10px solid #5863f8;
+  border-right: 10px solid var(--button_background);
   box-shadow: 0 0 20px 0px #00000014;
   transition: .2s ease-out;
 }
 .alert_text:hover {
-  border-right: 0px solid white;
+  border-right: 0px solid var(--content_border_color);
 }
 .alert_text .error_alert{
   border-right: 10px solid #ff652c;

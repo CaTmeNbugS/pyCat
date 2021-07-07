@@ -8,7 +8,7 @@
 
 .imgBox{
     height: 60px;
-    background: #d2d2d2;
+    background: var(--input_background);
     border-radius: 50%;
 }
 .imgContainer{
@@ -27,9 +27,9 @@
 }
 .buyBtn{
     padding: 15px;
-    background: #5863F8;
+    background: var(--button_background);
     border-radius: 10px;
-    color: white;
+    color: var(--button_color);
     text-align: center;
     font-size: 20px;
     transition: 0.2s ease-out;
@@ -37,23 +37,24 @@
     
 }
 .buyBtn:hover{
-    background: #0D85F4;
+    background: var(--button_background_hover);
 }
 .price{
     border-radius: 10px;
-    color: black;
+    color: var(-text_color);
     font-size: 20px;
     justify-content: center;
     display: grid;
 }
 .priceBadge{
     padding: 15px;
-    border: 3px solid #ebebeb;
+    border: 3px solid var(--input_background);
     border-radius: 20px;
 }
 .catName{
     font-size: 40px;
     padding-left: 15px;
+    color: var(--text_color);
 }
 .favorite{
 font-size: 32px;
@@ -77,36 +78,26 @@ padding-top: 4px;
 }
 .imgBlockFlex:hover{
     cursor: pointer;
-    border: 2px solid #1e90ff !important;
+    border: 2px solid var(--button_background_hover) !important;
 }
 .imgFlexRow{
     display: flex;
     flex-wrap: wrap;
 }
 .imgFlexRow > .content{
-    border: 2px solid white;
+    border: 2px solid var(--content_border_color);
 }
 .fas.fa-arrow-left{
     font-size: 27px;
     padding: 4px;
-    color: black;
+    color: var(--text_color);
     transition: .1s cubic-bezier(0.55, 0.09, 0.68, 0.5);
 }
 .fas.fa-arrow-left:hover{
-    color: dodgerblue;
+    color: var(--button_background_hover);
     transform: translate(-10px, 0px)
 }
-.fa-bookmark{
-    background: dodgerblue;
-    padding: 10px;
-    margin-left: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    transition: .2s;
-    border: 3px solid dodgerblue;
-  }
-  .c_b {
+.c_b {
     padding: 20px;
     margin-bottom: 20px;
 }

@@ -1,1 +1,72 @@
-<p>settings works!</p>
+<div style="margin-top: 25px;" class="content c_settings" >
+    <h2 class="settings_ar" >Темы</h2>
+    <div class="hr" ></div>
+    <div class="settings_box" >
+        <div class="theme_switcher" >
+            <div style='border-right: 2px solid var(--button_background);'  class="switch switch_active" >
+                <h2>Стандартные</h2>
+            </div>
+            <div style='border-left: 2px solid var(--button_background);' class="switch" >
+                <h2>Своя</h2>
+            </div>
+        </div>
+        <div class="theme_box" >
+            <div class="theme" (click)="setTheme(0, 'white')" >
+                <div class="theme_icon" >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 0 24 24" width="80px" fill="var(--text_color)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.05 4.14l-.39-.39c-.39-.39-1.02-.38-1.4 0l-.01.01c-.39.39-.39 1.02 0 1.4l.39.39c.39.39 1.01.39 1.4 0l.01-.01c.39-.38.39-1.02 0-1.4zM3.01 10.5H1.99c-.55 0-.99.44-.99.99v.01c0 .55.44.99.99.99H3c.56.01 1-.43 1-.98v-.01c0-.56-.44-1-.99-1zm9-9.95H12c-.56 0-1 .44-1 .99v.96c0 .55.44.99.99.99H12c.56.01 1-.43 1-.98v-.97c0-.55-.44-.99-.99-.99zm7.74 3.21c-.39-.39-1.02-.39-1.41-.01l-.39.39c-.39.39-.39 1.02 0 1.4l.01.01c.39.39 1.02.39 1.4 0l.39-.39c.39-.39.39-1.01 0-1.4zm-1.81 15.1l.39.39c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-.39-.39c-.39-.39-1.02-.38-1.4 0-.4.4-.4 1.02-.01 1.41zM20 11.49v.01c0 .55.44.99.99.99H22c.55 0 .99-.44.99-.99v-.01c0-.55-.44-.99-.99-.99h-1.01c-.55 0-.99.44-.99.99zM12 5.5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-.01 16.95H12c.55 0 .99-.44.99-.99v-.96c0-.55-.44-.99-.99-.99h-.01c-.55 0-.99.44-.99.99v.96c0 .55.44.99.99.99zm-7.74-3.21c.39.39 1.02.39 1.41 0l.39-.39c.39-.39.38-1.02 0-1.4l-.01-.01c-.39-.39-1.02-.39-1.41 0l-.39.39c-.38.4-.38 1.02.01 1.41z"/></svg>
+                </div>
+                <span class="theme_name">Светлая</span>
+            </div>
+            <div class="theme" (click)="setTheme(1, 'dark')" >
+                <div class="theme_icon" >
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="80px" viewBox="0 0 20 20" width="80px" fill="var(--text_color)"><rect fill="none" height="20" width="20"/><path d="M9.23,3.04C5.73,3.42,3,6.39,3,10c0,3.87,3.13,7,7,7c3.6,0,6.57-2.72,6.96-6.22c0.07-0.61-0.61-1.1-1.19-0.74 c-0.65,0.42-1.43,0.66-2.26,0.66c-2.32,0-4.2-1.88-4.2-4.2c0-0.83,0.24-1.6,0.65-2.25C10.3,3.73,9.93,2.98,9.23,3.04z"/></svg>
+                </div>
+                <span class="theme_name" >Темная</span>
+            </div>
+            <div class="theme" (click)="setTheme(2, 'dimmed')" >
+                <div class="theme_icon" >
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="80px" viewBox="0 0 20 20" width="80px" fill="var(--text_color)"><g><rect fill="none" height="20" width="20"/></g><g><g><g><path d="M9.38,10.05C7.75,6.89,9.03,4.11,9.76,3C6,3.13,3,6.21,3,9.99c0,0.4,0.04,0.78,0.1,1.16C3.39,11.06,3.69,11,4,11 c0.86,0,1.68,0.38,2.24,1.01C7.51,12.13,8.5,13.2,8.5,14.5c0,0.83-0.41,1.56-1.04,2.02C8.25,16.82,9.11,17,10.01,17 c2.45,0,4.6-1.26,5.86-3.17C14.21,13.99,10.98,13.16,9.38,10.05z"/></g><path d="M6,13l-0.27,0C5.38,12.4,4.74,12,4,12c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2c0.53,0,1.54,0,2,0c0.83,0,1.5-0.67,1.5-1.5 S6.83,13,6,13z"/></g></g></svg>
+                </div>
+                <span class="theme_name">Затемненная</span>
+            </div>
+        </div>
+        <div class="color_box" >
+            <div color="#d32f2f" (click)="setColor(0, '#d32f2f' )" class="color" >
+                <span>Красный</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+            <div color="#d81b60" (click)="setColor(1, '#d81b60' )" class="color" >
+                <span>Розовый</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+            <div color="#6200ea" (click)="setColor(2, '#6200ea' )" class="color" >
+                <span>Фиолетовый</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+            <div color="#3949ab" (click)="setColor(3, '#3949ab' )" class="color" >
+                <span>Синий</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+                <div color="#5863F8" (click)="setColor(4, '#5863F8' )" class="color" >
+                    <span>Голубой</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                </div>
+            <div color="#00c853" (click)="setColor(5, '#00c853' )" class="color" >
+                <span>Зеленый</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+            <div color="#ffd600" (click)="setColor(6, '#ffd600' )" class="color" >
+                <span>Желтый</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+            <div color="#ff9100" (click)="setColor(7, '#ff9100' )" class="color" >
+                <span>Оранжевый</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+            <div color="black" (click)="setColor(8, 'black' )" class="color" >
+                <span>Черный</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+        </div>
+    </div>
+</div>

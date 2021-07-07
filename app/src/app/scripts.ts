@@ -1,5 +1,5 @@
 export function rippleEffect(btns){
-    btns.forEach((btn) =>{
+    btns.forEach((btn) => {
         btn.addEventListener('click', function(event){
             const rect = btn.getBoundingClientRect();
             const x = event.clientX - rect.x;
@@ -17,7 +17,6 @@ export function rippleEffect(btns){
         )
     })
 };
-
 export class RegisterResponse{
     public success: boolean;
     public msg: string;

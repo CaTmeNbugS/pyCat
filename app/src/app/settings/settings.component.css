@@ -1,0 +1,100 @@
+.c_settings{
+    width: 900px;
+}
+.settings_ar{
+    padding: 15px 25px;
+    font-size: 28px;
+    color: var(--text_color);
+}
+.settings_box{
+    padding: 15px 25px;
+}
+.theme_switcher {
+    display: flex;
+    border: 3px solid var(--button_background);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.switch {
+    width: 50%;
+    text-align: center;
+    padding: 7px 0px;
+    cursor: pointer;
+    transition: .2s;
+    color: var(--text_color);
+}
+.switch:hover {
+    background: var(--background);
+}
+.switch_active {
+    color: var(--button_color) !important;
+    background: var(--button_background) !important;
+}
+.theme_box {
+    display: flex;
+    margin: 35px 0px;
+}
+.theme {
+    width: 180px;
+    margin: 0px 50px;
+    text-align: center;
+    height: 150px;
+    transition: .2s;
+    border-radius: 10px;
+    display: grid;
+    cursor: pointer;
+}
+.theme:hover {
+    background: var(--background);
+}
+.theme_icon{
+    display: grid;
+    justify-content: center;
+    align-self: center;
+}
+.theme_active{
+    background: var(--background);
+}
+.theme_name{
+    color: var(--text_color);
+}
+.color_box{
+    display: flex;
+    margin: 15px 0px;
+}
+.color{
+    height: 25px;
+    padding: 6.5px;
+    margin: 0px 3px;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    border: 3px solid var(--background);
+    cursor: pointer;
+    justify-content: center;
+    transition: .2s;
+}
+.color:hover{
+    background: var(--background);
+}
+.color_active{
+   background: var(--button_background) !important;
+   border: 3px solid var(--button_background);
+   color: var(--button_color);
+}
+.color > svg{
+    position: absolute;
+    opacity: 0;
+    fill: var(--button_color);
+    transition: .2s;
+}
+.color_active > svg{
+    opacity: 1;
+}
+.color_active > span{
+    opacity: 0;
+}
+.color > span{
+    transition: .2s
+}

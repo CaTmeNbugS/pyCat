@@ -5,14 +5,14 @@
     }
     .block:hover .second_btn{
       background: none;
-      border: 2px solid #ebebeb;
+      border: 2px solid var(--input_background);
     }
     .block:hover{
       cursor: pointer;
     }
     .blockBottomBarContainer {
       height: 50px;
-      background: #ffffff;
+      background: var(--content_background);
     }
     .blockBottomBar {
       padding: 10px;
@@ -35,5 +35,5 @@
     }
     a{
       text-decoration:none;
-      color: black;
+      color: var(--text_color);
     }

@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -25,6 +25,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class RegComponent implements OnInit {
 
+  @Output() alert_text = new EventEmitter();
 
   form = new FormGroup({
     name: new FormControl('',[Validators.required]),
@@ -43,6 +44,7 @@ export class RegComponent implements OnInit {
   ngOnInit(): void {
     const r_btn = document.querySelectorAll('.r_btn');
     rippleEffect(r_btn);
+    console.log(this.alert_text)
   }
   user_reg(){
       const user = {
@@ -59,8 +61,9 @@ export class RegComponent implements OnInit {
           this.flashMsg.show('Ошибка регистрации', {cssClass: 'alert', timeout: 5000})
           this.router.navigate(['/owner/registration'])
         } else{
-          this.flashMsg.show(alert_text, {cssClass: 'alert', closeOnClick: true, timeout: 7000})
-          this.router.navigate(['/owner/auth'])
+          this.flashMsg.show(alert_text, {cssClass: 'alert', closeOnClick: true, timeout: 7000});
+          this.alert_text.emit(alert_text);
+          this.router.navigate(['/owner/auth']);
         }
       });
   }

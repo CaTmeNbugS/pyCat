@@ -8,9 +8,9 @@
 h2.error {
     padding: 5px;
     border-radius: 5px;
-    color: #ff652c;
+    color: var(--error_color);
     position: absolute;
     width: 540px;
     text-align: center;
-    background: white;
+    background: var(--content_background);
 }
