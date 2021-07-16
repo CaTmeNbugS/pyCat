@@ -21,3 +21,14 @@ export class RegisterResponse{
     public success: boolean;
     public msg: string;
 }
+export class DeclarationResponse{
+    public _id: object;
+    public owner_id: string;
+    public type: string;
+    public name: string;
+    public age: object;
+    public value: number;
+    public description: string;
+    public info: object;
+    public __v: number;
+}   

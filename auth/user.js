@@ -23,7 +23,33 @@ const User_schema = mongoose.Schema({
     }
 });
 
+const Declaration_schema = mongoose.Schema({
+    owner_id: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: Object,
+    },
+    description: {
+        type: String,
+    },
+    info: {
+        type: Object,
+    },
+    name: {
+        type: String,
+    },
+    type: {
+        type: String,
+    },
+    value: {
+        type: Number,
+    },
+});
+
 const User = module.exports = mongoose.model('User', User_schema);
+const Declaration = module.exports = mongoose.model('Declaration', Declaration_schema);
 
 module.exports.get_user_by_login = function(login, callback) {
     const query = {email: login};

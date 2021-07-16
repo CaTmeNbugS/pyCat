@@ -5,14 +5,12 @@
                 <i class="fas fa-arrow-left"></i>
             </a>
             <div class="catNameContainer" >
-                <h2 class="catName" >Name</h2>
+                <h2 class="catName" >{{declarations?.name}}</h2>
             </div>
         </div>
         <div class="content" >
             <div class="img" >
             </div>
-
-
         </div>
         <div class="imgFlexRow" >
             <div class="content imgBlockFlex" >
@@ -39,7 +37,7 @@
                     margin: 10px 0px 18px 0px;">Описание</h2>
                     <div class="content desc_b">
                         <p style="font-size: 22px;
-                        font-family: 'Roboto';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo commodi dicta quod, molestias soluta expedita assumenda consectetur corrupti voluptatibus ea pariatur suscipit, delectus nisi?</p>
+                        font-family: 'Roboto';">{{declarations?.description}}</p>
                     </div>
                 </div>
                 <div>
@@ -49,7 +47,8 @@
                         </div>
 
                         <div class="s_c" >
-                            <h2>2 года</h2>
+                            <h2>{{declarations?.age.age}} года <br> 
+                                {{declarations?.age.month}} месяцев </h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
@@ -58,7 +57,7 @@
                         </div>
 
                         <div class="s_c" >
-                            <h2>девочка</h2>
+                            <h2>{{declarations?.info.gender}}</h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
@@ -66,8 +65,8 @@
                             <h2>Порода</h2>
                         </div>
 
-                        <div class="s_c" >
-                            <h2>сиамская</h2>
+                        <div title='{{declarations?.info.breed}}' class="s_c" >
+                            <h2 >{{declarations?.info.breed}}</h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
@@ -76,33 +75,41 @@
                         </div>
 
                         <div class="s_c" >
-                            <h2>есть</h2>
+                            <h2 *ngIf="declarations?.info.passport" >есть</h2>
+                            <h2 *ngIf="!declarations?.info.passport" >нету</h2>
+
                         </div>
                     </div>
                     <div class="content flex_b" >
                         <div class="f_c" >
-                            <h2>Привита</h2>
+                            <h2 *ngIf="declarations?.info.gender == 'девочка'" >Привита</h2>
+                            <h2 *ngIf="declarations?.info.gender == 'мальчик'" >Привит</h2>
                         </div>
 
                         <div class="s_c" >
-                            <h2>да</h2>
+                            <h2 *ngIf="declarations?.info.vaccinated" >да</h2>
+                            <h2 *ngIf="!declarations?.info.vaccinated" >нет</h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
                         <div class="f_c" >
-                            <h2>Приучина к лотку</h2>
+                            <h2 *ngIf="declarations?.info.gender == 'девочка'" >Приучена к лотку</h2>
+                            <h2 *ngIf="declarations?.info.gender == 'мальчик'" >Приучен к лотку</h2>
                         </div>
 
                         <div class="s_c" >
-                            <h2>да</h2>
+                            <h2 *ngIf="declarations?.info.attlb" >да</h2>
+                            <h2 *ngIf="!declarations?.info.attlb" >нет</h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
                         <div class="f_c" >
-                            <h2>Стирилизована</h2>
+                            <h2 *ngIf="declarations?.info.gender == 'девочка'" >Стерилизована</h2>
+                            <h2 *ngIf="declarations?.info.gender == 'мальчик'" >Стерилизован</h2>
                         </div>
                         <div class="s_c" >
-                            <h2>да</h2>
+                            <h2 *ngIf="declarations?.info.sterilized" >да</h2>
+                            <h2 *ngIf="!declarations?.info.sterilized" >нет</h2>
                         </div>
                     </div>
                 </div>
@@ -140,7 +147,7 @@
         <div class="buyContainer" >  
             <div class="price" >
                 <div class="priceBadge" >
-                    <h2>2000руб</h2>
+                    <h2>{{declarations?.value}}руб</h2>
                 </div>
             </div>
         </div>

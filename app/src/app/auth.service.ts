@@ -14,5 +14,8 @@ export class AuthService {
     headers.append('content-Type', 'application/json');
     return this.http.post<RegisterResponse>('http://localhost:3000/owner/registration', user, {headers: headers});
   }
+  getDeclarations(){
+    return this.http.get('http://localhost:3000/declarations');
+  }
 
 }

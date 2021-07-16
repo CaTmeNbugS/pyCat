@@ -6,6 +6,7 @@ const passport = require('passport');
 const path = require('path');
 const config = require('./config/data_base');
 const user = require('./routes/user')
+const Declaration = require('./auth/user')
 
 const app = express();
 const port = 3000;
@@ -27,17 +28,18 @@ mongoose.connection.on('connected', function(){
     console.log('Все четко')
 });
 mongoose.connection.on('error', function(err){
-    console.log(' херня какаета' + err)
+    console.log(' херня какаета ' + err)
 });
-
-app.get('/', function(req, res){
-    res.send('Главная')
+ 
+app.get('/declarations', async function(req, res){
+    await Declaration.find({}, function(err,data){
+        res.json(data)
+    })
 });
 app.get('/owner', passport.authenticate('jwt', {session: false}) , function(req, res){
     res.send('Овгнер')
 });
 app.use('/owner', user);
-
 app.listen(port, function() {
     console.log("Сервак на порте: " + port);
 });

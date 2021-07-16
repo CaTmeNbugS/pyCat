@@ -89,6 +89,7 @@ export class SettingsComponent implements OnInit {
     localStorage.removeItem('color');
     localStorage.setItem('color', color); 
     root.setProperty('--button_background', color);
+    root.setProperty('--search_shadow', color + 36);
   });
   }
 }

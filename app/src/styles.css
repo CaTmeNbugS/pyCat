@@ -17,7 +17,7 @@ a{
   border-radius: 15px;
 }
 ::selection{
-  background: #5863F8;
+  background: var(--button_background);
 }
 body{
   background: var(--background);
@@ -39,7 +39,8 @@ form{
 .s_c {
   width: 170px;
   text-align: center;
-  border-left: 3px solid #1e90ff;
+  border-left: 3px solid var(--button_background);
+  overflow-wrap: anywhere;
 }
 .f_c {
   width: 250px;

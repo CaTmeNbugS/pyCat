@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {buyCatsInterface} from '../home/home.component'
+import { DeclarationResponse } from '../scripts'
 
 @Component({
   selector: 'app-buy-block',
@@ -8,9 +8,9 @@ import {buyCatsInterface} from '../home/home.component'
 })
 export class BuyBlockComponent implements OnInit {
 
-  @Input() buyCatBlock: buyCatsInterface;
+  @Input() buyCatBlock: DeclarationResponse;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

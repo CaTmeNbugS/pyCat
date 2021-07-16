@@ -41,7 +41,7 @@
 }
 .price{
     border-radius: 10px;
-    color: var(-text_color);
+    color: var(--text_color);
     font-size: 20px;
     justify-content: center;
     display: grid;
@@ -78,7 +78,7 @@ padding-top: 4px;
 }
 .imgBlockFlex:hover{
     cursor: pointer;
-    border: 2px solid var(--button_background_hover) !important;
+    border: 2px solid var(--button_background) !important;
 }
 .imgFlexRow{
     display: flex;
@@ -94,7 +94,7 @@ padding-top: 4px;
     transition: .1s cubic-bezier(0.55, 0.09, 0.68, 0.5);
 }
 .fas.fa-arrow-left:hover{
-    color: var(--button_background_hover);
+    color: var(--button_background);
     transform: translate(-10px, 0px)
 }
 .c_b {
