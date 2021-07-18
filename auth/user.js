@@ -46,11 +46,13 @@ const Declaration_schema = mongoose.Schema({
     value: {
         type: Number,
     },
+    imgs: {
+        type: Array,
+    }
 });
 
 const User = module.exports = mongoose.model('User', User_schema);
 const Declaration = module.exports = mongoose.model('Declaration', Declaration_schema);
-
 module.exports.get_user_by_login = function(login, callback) {
     const query = {email: login};
     User.findOne(query, callback);

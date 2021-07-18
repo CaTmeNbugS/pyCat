@@ -7,6 +7,7 @@ const path = require('path');
 const config = require('./config/data_base');
 const user = require('./routes/user')
 const Declaration = require('./auth/user')
+const Filter = require('./auth/user')
 
 const app = express();
 const port = 3000;

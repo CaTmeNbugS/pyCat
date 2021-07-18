@@ -21,6 +21,14 @@ export class RegisterResponse{
     public success: boolean;
     public msg: string;
 }
+export class info{
+    gender: string;
+    breed: string;
+    passport: boolean;
+    vaccinated: boolean;
+    attlb: boolean;
+    sterilized: boolean;
+  }
 export class DeclarationResponse{
     public _id: object;
     public owner_id: string;
@@ -28,7 +36,8 @@ export class DeclarationResponse{
     public name: string;
     public age: object;
     public value: number;
+    public imgs: Array<string>;
     public description: string;
-    public info: object;
+    public info: info;
     public __v: number;
 }   

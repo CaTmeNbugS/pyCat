@@ -14,16 +14,17 @@
         <h2 style="font-size:30px" >Фильтры</h2>
       </div>
       <div class="filterBox" >
+        <form style="padding: 0;" [formGroup]="form" (submit)="filter()">
         <div class="fl_searchs_cn" >
           <h2 >Цена</h2>
           <div class="fl_searchs flex_item_cn" >
             <div class="flex_item_cn" >
               <h2>от</h2>
-              <input class="fl_sear search_interaction seh_t b_t" type="text">
+              <input formControlName="valueMin" class="fl_sear search_interaction seh_t b_t" type="text">
             </div>
             <div class="flex_item_cn">
               <h2>до</h2>
-              <input class="fl_sear search_interaction seh_t b_t"type="text">
+              <input formControlName="valueMax" class="fl_sear search_interaction seh_t b_t"type="text">
             </div>
             <div class="flex_item_cn">
               <h2>₽</h2>
@@ -36,13 +37,13 @@
           <div class="fl_searchs flex_item_cn" style="justify-content: space-between;" >
             <div class="flex_item_cn" >
               <div class="checkboxPadding"> 
-                <input type="checkbox" >
+                <input formControlName="genderMale" type="checkbox" >
               </div>
               <h2>мальчик</h2>
             </div>
             <div class="flex_item_cn">
               <div class="checkboxPadding"> 
-                <input type="checkbox" >
+                <input formControlName="genderFemale" type="checkbox" >
               </div>
               <h2>девочка</h2>
             </div>
@@ -64,24 +65,30 @@
               <h2>лет</h2>
             </div>
           </div>
-        </div>
-        <div class="hr" ></div>
-        <div class="fl_searchs_cn" >
-          <h2 >Порода</h2>
-          <div class="fl_searchs" >
-              <div class="simple_btn" >
-                <h2 class="seh_t" >Выбрать породу</h2>
-              </div>
+          </div> 
+          <div class="hr" ></div>
+          <div class="fl_searchs_cn" >
+            <h2 >Порода</h2>
+            <div class="fl_searchs" >
+              <input formControlName="breed" class="fl_sear search_interaction seh_t b_t sear_full"type="text">
+                </div>
+            </div>
+          <div class="hr" ></div>
+          <div class="fl_searchs_cn" >
+            <h2 >Город</h2>
+            <div class="fl_searchs" >
+                <input formControlName="city" class="fl_sear search_interaction seh_t b_t sear_full"type="text">
+            </div>
           </div>
-        </div> 
-        <div class="hr" ></div>
-        <div class="fl_searchs_cn" >
-          <h2 >Город / Область</h2>
-          <div class="fl_searchs" >
-              <div class="simple_btn" >
-                <h2 style="font-size:18px;" >Выбрать город / регион</h2>
-              </div>
+          <div class="hr" ></div>
+          <div class="fl_searchs_cn" >
+            <div class="fl_searchs" >
+                <button type="submit" class="simple_btn r_btn" >
+                  <h2 style="font-size:18px;" >Применить</h2>
+                </button>
+            </div>
           </div>
+        </form>
         </div>
       </div>
     </div>

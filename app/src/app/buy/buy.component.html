@@ -10,14 +10,12 @@
         </div>
         <div class="content" >
             <div class="img" >
+                <img src="{{declarations?.imgs[imgIndex]}}" >
             </div>
         </div>
-        <div class="imgFlexRow" >
-            <div class="content imgBlockFlex" >
-            </div>
-            <div class="content imgBlockFlex" >
-            </div>
-            <div class="content imgBlockFlex" >
+        <div *ngIf="declarations?.imgs.length > 1" class="imgFlexRow" >
+            <div (click)="chosenImg(i)" *ngFor="let img of declarations.imgs; let i = index" class="content imgBlockFlex" >
+                <img src="{{img}}">
             </div>
         </div>
         <div class="content c_b" >

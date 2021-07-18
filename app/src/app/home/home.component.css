@@ -38,6 +38,7 @@
     font-family: 'Open Sans';
     background: var(--content_background);
     color: var(--text_color);
+    background: var(--input_background);
   }
   .fl_searchs_cn {
     padding: 20px 15px 15px 15px;
@@ -54,7 +55,7 @@
       border: 2px solid var(--input_background);
       border-radius: 5px;
       transition: .2s;
-      background: var(--content_background);
+      background: var(--input_background);
   }
   input[type="checkbox"]:hover{
     border: 2px solid var(--button_background);
@@ -82,3 +83,8 @@
   .checkboxPadding{
     padding: 3px;
   }
+  .sear_full {
+    width: 250px !important;
+    margin: 0 !important;
+    height: 26px !important;
+}

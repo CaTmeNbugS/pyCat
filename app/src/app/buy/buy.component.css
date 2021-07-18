@@ -37,7 +37,7 @@
     
 }
 .buyBtn:hover{
-    background: var(--button_background_hover);
+    filter: brightness(0.9);
 }
 .price{
     border-radius: 10px;
@@ -75,6 +75,12 @@ padding-top: 4px;
     height: 60px;
     margin: 7px 5px 7px 0px;
     transition: .2s;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+}
+.imgBlockFlex > img {
+    width: 75px;
 }
 .imgBlockFlex:hover{
     cursor: pointer;

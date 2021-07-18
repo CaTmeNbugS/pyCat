@@ -17,5 +17,4 @@ export class AuthService {
   getDeclarations(){
     return this.http.get('http://localhost:3000/declarations');
   }
-
 }

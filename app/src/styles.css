@@ -156,8 +156,7 @@ h2.login:hover {
   cursor: pointer;
 }
 .simple_btn:hover{
-  background:var(--button_background_hover);
-
+  filter: brightness(0.9);
 }  
 .content{
   border-radius: 10px;
@@ -168,6 +167,10 @@ h2.login:hover {
 .flex_item_cn{
   display: inline-flex;
 }
+button.simple_btn {
+  width: 100%;
+  border: none;
+}
 .grid_item_cn{
   display: inline-grid;
 }
@@ -175,6 +178,11 @@ h2.login:hover {
   height: 300px;
   width: 325px;
   overflow: hidden;
+  align-content: center;
+  border-radius: 7px;
+}
+.img_b > img {
+  width: 325px;
 }
 .f_block > .img_b{
   height: 225px;

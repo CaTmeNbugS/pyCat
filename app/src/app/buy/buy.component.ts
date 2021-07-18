@@ -11,6 +11,8 @@ import { DeclarationResponse} from '../scripts'
 })
 export class BuyComponent implements OnInit {
 
+  imgIndex: number = 0;
+
   constructor(private route:ActivatedRoute, private declaration: AuthService) { }
 
   declarations: DeclarationResponse;
@@ -29,6 +31,9 @@ export class BuyComponent implements OnInit {
     });
     const r_btn = document.querySelectorAll('.r_btn');
     rippleEffect(r_btn)
+  }
+  chosenImg(i){
+    this.imgIndex = i;
   }
 
 }
