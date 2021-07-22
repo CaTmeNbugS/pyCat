@@ -106,8 +106,95 @@ padding-top: 4px;
 .c_b {
     padding: 20px;
     margin-bottom: 20px;
+    display: grid;
+    justify-content: center;
 }
 .desc_b{
     padding: 10px 5px;
-    width: 315px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: grid;
+}
+#imgBox{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+}
+.imgBlur {
+    position: absolute;
+    width: 600px;
+    filter: blur(15px);
+}
+.back {
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    z-index: 99;
+}
+.buyClose {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background: #0000008c;
+}
+.buyBlock {
+    z-index: 999;
+    padding: 15px;
+}
+.contactBox {
+    border: 3px solid var(--background);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background: var(--content_background);
+    z-index: 0;
+    width: calc(100% - 140px);
+    transition: .2s;
+}
+.copyBox {
+    background: var(--input_background);
+    margin-left: -8px;
+    width: 140px;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    transition: .2s;
+    align-items: center;
+    justify-content: center;
+}
+.copyBox > h2{
+    font-family: "Open Sans";
+}
+.contactContainer{
+    display: flex;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.copyBox.copied {
+    background: var(--button_background) !important;
+}
+.contactBox.copied{
+    border: 3px solid var(--button_background);
+}
+.copyBox > svg {
+    position: absolute;
+    visibility: hidden;
+    fill: var(--text_color)
+}
+.copyBox.copied > svg{
+    z-index: 9999;
+    visibility: visible ;
+}
+.copyBox > span{
+    opacity: 1;
+    transition: .2s
+}
+.copyBox.copied > span{
+    opacity: 0;
 }

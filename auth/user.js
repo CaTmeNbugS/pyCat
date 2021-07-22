@@ -24,10 +24,6 @@ const User_schema = mongoose.Schema({
 });
 
 const Declaration_schema = mongoose.Schema({
-    owner_id: {
-        type: String,
-        required: true
-    },
     age: {
         type: Object,
     },
@@ -48,6 +44,12 @@ const Declaration_schema = mongoose.Schema({
     },
     imgs: {
         type: Array,
+    },
+    owner :{
+        type: Object
+    },
+    onlyMail: {
+        type: Boolean,
     }
 });
 

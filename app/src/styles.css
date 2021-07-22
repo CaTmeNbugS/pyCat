@@ -204,6 +204,9 @@ i {
 }
 .contact > h2 {
   margin-left: 35px;
+  width: 185px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .frame{
   width: 1088px;

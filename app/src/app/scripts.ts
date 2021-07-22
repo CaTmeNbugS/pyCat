@@ -22,16 +22,21 @@ export class RegisterResponse{
     public msg: string;
 }
 export class info{
-    gender: string;
-    breed: string;
     passport: boolean;
     vaccinated: boolean;
     attlb: boolean;
     sterilized: boolean;
-  }
+}
+export class owner{
+    id: string;
+    number: string;
+    mail: string;
+    adress: string;
+    name: string;
+    surname: string;
+}
 export class DeclarationResponse{
     public _id: object;
-    public owner_id: string;
     public type: string;
     public name: string;
     public age: object;
@@ -40,4 +45,8 @@ export class DeclarationResponse{
     public description: string;
     public info: info;
     public __v: number;
+    public gender: string;
+    public breed: string;
+    public owner: owner;
+    public onlyMail: boolean;
 }   

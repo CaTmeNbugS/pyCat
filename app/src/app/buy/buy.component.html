@@ -8,36 +8,22 @@
                 <h2 class="catName" >{{declarations?.name}}</h2>
             </div>
         </div>
-        <div class="content" >
-            <div class="img" >
-                <img src="{{declarations?.imgs[imgIndex]}}" >
-            </div>
+        <div id="imgBox" class="content" >
+            <img style="border-radius: 5px;z-index: 99;margin: 10px;" src="{{declarations?.imgs[imgIndex]}}" >
+            <img class="imgBlur" src="{{declarations?.imgs[imgIndex]}}" >
         </div>
         <div *ngIf="declarations?.imgs.length > 1" class="imgFlexRow" >
             <div (click)="chosenImg(i)" *ngFor="let img of declarations.imgs; let i = index" class="content imgBlockFlex" >
                 <img src="{{img}}">
             </div>
         </div>
+        <div class="content desc_b" >
+            <p style="padding: 10px 0px;font-family: 'Open Sans';">{{declarations?.owner.adress}}</p>
+        </div>
+            <div class="content desc_b">
+                <p style="font-family: 'Open Sans'">{{declarations?.description}}</p>
+            </div>
         <div class="content c_b" >
-            <h2 style="font-size: 35px;
-            text-align: center;" >Информация</h2>
-            <div style="margin: 10px 20px 20px 20px;" class="hr" ></div>
-            <div style="display:flex" >
-                <div style="width: 347px;text-align:center" >
-                    <div class="content desc_b" >
-                        <p style="    padding: 10px 0px;
-                        width: 315px;
-                        font-size: 17px;">
-                            Оренбург, микрорайон Северный, микрорайон 70-летия ВЛКСМ, 5
-                        </p>
-                    </div>
-                    <h2 style="font-size: 28px;
-                    margin: 10px 0px 18px 0px;">Описание</h2>
-                    <div class="content desc_b">
-                        <p style="font-size: 22px;
-                        font-family: 'Roboto';">{{declarations?.description}}</p>
-                    </div>
-                </div>
                 <div>
                     <div class="content flex_b" >
                         <div class="f_c" >
@@ -55,7 +41,8 @@
                         </div>
 
                         <div class="s_c" >
-                            <h2>{{declarations?.info.gender}}</h2>
+                            <h2 *ngIf="declarations?.gender == 'male'" >мальчик</h2>
+                            <h2 *ngIf="declarations?.gender == 'female'">девочка</h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
@@ -64,7 +51,7 @@
                         </div>
 
                         <div title='{{declarations?.info.breed}}' class="s_c" >
-                            <h2 >{{declarations?.info.breed}}</h2>
+                            <h2 >{{declarations?.breed}}</h2>
                         </div>
                     </div>
                     <div class="content flex_b" >
@@ -80,8 +67,8 @@
                     </div>
                     <div class="content flex_b" >
                         <div class="f_c" >
-                            <h2 *ngIf="declarations?.info.gender == 'девочка'" >Привита</h2>
-                            <h2 *ngIf="declarations?.info.gender == 'мальчик'" >Привит</h2>
+                            <h2 *ngIf="declarations?.gender == 'female'" >Привита</h2>
+                            <h2 *ngIf="declarations?.gender == 'male'" >Привит</h2>
                         </div>
 
                         <div class="s_c" >
@@ -91,8 +78,8 @@
                     </div>
                     <div class="content flex_b" >
                         <div class="f_c" >
-                            <h2 *ngIf="declarations?.info.gender == 'девочка'" >Приучена к лотку</h2>
-                            <h2 *ngIf="declarations?.info.gender == 'мальчик'" >Приучен к лотку</h2>
+                            <h2 *ngIf="declarations?.gender == 'female'" >Приучена к лотку</h2>
+                            <h2 *ngIf="declarations?.gender == 'male'" >Приучен к лотку</h2>
                         </div>
 
                         <div class="s_c" >
@@ -102,8 +89,8 @@
                     </div>
                     <div class="content flex_b" >
                         <div class="f_c" >
-                            <h2 *ngIf="declarations?.info.gender == 'девочка'" >Стерилизована</h2>
-                            <h2 *ngIf="declarations?.info.gender == 'мальчик'" >Стерилизован</h2>
+                            <h2 *ngIf="declarations?.gender == 'female'" >Стерилизована</h2>
+                            <h2 *ngIf="declarations?.gender == 'male'" >Стерилизован</h2>
                         </div>
                         <div class="s_c" >
                             <h2 *ngIf="declarations?.info.sterilized" >да</h2>
@@ -111,7 +98,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
 
         </div>
@@ -120,7 +106,7 @@
 <div style="padding: 25px;" class="scroll_box bl_frame">
     <div class="flex_item_cn" >
         <div class="textContainer" >
-            <h2 class="sellerName" >Name</h2>
+            <h2 title="{{declarations?.owner.name}} {{declarations?.owner.surname}}" class="sellerName" >{{declarations?.owner.name}} {{declarations?.owner.surname}}</h2>
         </div>
         <div class="imgContainer" >
             <div class="imgBox" >
@@ -128,18 +114,18 @@
         </div>
     </div>
     <div class="buyContainer" >  
-        <div class="buyBtn r_btn" >
+        <div (click)="buy()" class="buyBtn r_btn" >
             <h2>Купить</h2>
         </div>
     </div>
     <div class="buyContainer">
-        <div class="contact" >
+        <div *ngIf="!declarations?.onlyMail" class="contact" >
             <i  class="fas fa-phone"></i>
-            <h2>+79877867990</h2>
+            <h2 title="{{declarations?.owner.number}}" >{{declarations?.owner.number}}</h2>
         </div>
         <div class="contact" >
             <i  class="fas fa-envelope"></i>
-            <h2>mail@xmail.com</h2>
+            <h2 title="{{declarations?.owner.mail}}" >{{declarations?.owner.mail}}</h2>
         </div>
         </div>
         <div class="buyContainer" >  
@@ -153,4 +139,24 @@
     </div>
 </div>
 
+</div>
+<div *ngIf="showBuy" class="back" >
+    <div style="z-index:999" class="buyBlock content" >
+        <span style='font-family: "Open Sans"'>Нажмите, чтобы скопировать</span>
+        <div class="contactContainer">
+            <h2 (click)="copy(declarations?.owner.number, 0)" class="contactBox" *ngIf="declarations?.onlyMail" >{{declarations?.owner.number}}</h2>
+            <div (click)="copy(declarations?.owner.number, 0)" class="copyBox" >
+                <span>скопировать</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 24 24" width="35px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+        </div>
+        <div class="contactContainer">
+            <h2 (click)="copy(declarations?.owner.mail, 1)" class="contactBox" *ngIf="declarations?.onlyMail" >{{declarations?.owner.mail}}</h2>
+            <div (click)="copy(declarations?.owner.mail, 1)" class="copyBox" >
+                <span>скопировать</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 24 24" width="35px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+            </div>
+        </div>
+    </div>
+    <div (click)="closeBuy()" class="buyClose" ></div>
 </div>
