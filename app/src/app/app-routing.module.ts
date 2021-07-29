@@ -8,10 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { BuyComponent } from './buy/buy.component';
 import { FormComponent } from './form/form.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, data: {animation: '1page'}},
-  {path: 'owner', component: UserComponent, data: {animation: '2page'}},
+  {path: 'owner', component: UserComponent,canActivate:[AuthGuard], data: {animation: '2page'}},
   {path: 'adform', component: FormComponent, data: {animation: '3page'}},
   {path: 'favorite', component: FavoriteComponent, data: {animation: '4page'}},
   {path: 'settings', component: SettingsComponent, data: {animation: '5page'}},

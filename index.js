@@ -4,10 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const path = require('path');
-const config = require('./config/data_base');
 const user = require('./routes/user')
-const Declaration = require('./auth/user')
-const Filter = require('./auth/user')
+const Declaration = require('./modules/declaration')
+require("dotenv").config();
 
 const app = express();
 const port = 3000;
@@ -23,7 +22,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'project')));
 
-mongoose.connect(config.data_base, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DATA_BASE, { useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.connection.on('connected', function(){
     console.log('Все четко')
@@ -43,4 +42,5 @@ app.get('/owner', passport.authenticate('jwt', {session: false}) , function(req,
 app.use('/owner', user);
 app.listen(port, function() {
     console.log("Сервак на порте: " + port);
+    console.log(process.env.SECRET_KEY)
 });

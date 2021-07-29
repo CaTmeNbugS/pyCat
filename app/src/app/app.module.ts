@@ -15,7 +15,7 @@ import { BuyComponent } from './buy/buy.component';
 import { BuyBlockComponent } from './buy-block/buy-block.component';
 import { FormComponent } from './form/form.component';
 import { SettingsComponent } from './settings/settings.component';
-import { AuthService } from './auth.service';
+import { BackendService } from './backend.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -42,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FlashMessagesModule.forRoot(),
   ],
-  providers: [AuthService],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

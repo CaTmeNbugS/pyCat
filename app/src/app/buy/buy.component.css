@@ -159,7 +159,7 @@ padding-top: 4px;
     transition: .2s;
 }
 .copyBox {
-    background: var(--input_background);
+    background: var(--background);
     margin-left: -8px;
     width: 140px;
     display: flex;
@@ -185,7 +185,7 @@ padding-top: 4px;
 .copyBox > svg {
     position: absolute;
     visibility: hidden;
-    fill: var(--text_color)
+    fill: white;
 }
 .copyBox.copied > svg{
     z-index: 9999;

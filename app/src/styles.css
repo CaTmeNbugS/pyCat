@@ -54,7 +54,6 @@ form{
   padding: 8px;
 }
 .formContainer{
-  width: 600px;
   margin-top: 20px;
 }
 .regBox{
@@ -64,7 +63,7 @@ form{
   font-size:28px;
 }
 .regPut{
-  width: 520px;
+  width: 430px;
   height: 37px;
   border: 2px solid var(--input_background);
   border-radius: 5px;
@@ -84,7 +83,6 @@ form{
   outline: none;
 }
 h2.login {
-  margin-top: 5px;
   font-size: 20px;
   color: var(--text_color);
   display: inline;
@@ -107,7 +105,7 @@ h2.login:hover {
 }
 .buttonMit:hover {
   cursor: pointer;
-  background: var(--button_background_hover);
+  filter: brightness(0.8);
 }
 .buttonMit:focus {
   outline: none;
@@ -116,10 +114,11 @@ h2.login:hover {
   text-align: center;
 }
 .buttonMit:disabled {
-  background: var(--button_disabled_background);
+  background: var(--input_background);
+  color: var(--text_color);
 }
 .buttonMit:disabled:hover {
-  background: var(--button_disabled_background);
+  background: var(--input_background);
   cursor: not-allowed;
 }
 .bl_frame{
@@ -262,7 +261,7 @@ i {
   animation: 1250ms ripple ;
   transition: 1s linear;
 }
-.r_btn{
+.r_btn , .ripple_btn{
   position: relative;
   overflow: hidden;
 }

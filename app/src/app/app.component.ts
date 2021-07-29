@@ -1,7 +1,7 @@
-import { trigger, state, style, transition, animate, query } from '@angular/animations';
-import {Component, Input, OnInit} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-import {slider} from './route-animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { slider } from './route-animations';
 import { rippleEffect } from './scripts';
 
 @Component({
@@ -37,8 +37,6 @@ import { rippleEffect } from './scripts';
 })
 export class AppComponent implements OnInit {
 
-  @Input() alert_text: string;
-
   side_bar_state = 'n_spr';
   btn_text_state = 'hidden';
 
@@ -47,11 +45,9 @@ export class AppComponent implements OnInit {
       localStorage.setItem('theme', 'white');
       localStorage.setItem('color', '#5863F8');
     }
-    
-    const r_btn = document.querySelectorAll('.r_btn');
-    rippleEffect(r_btn);
+    const ripple_btn = document.querySelectorAll('.ripple_btn');
+    rippleEffect(ripple_btn);
     const root = document.documentElement.style;
-
 
     const color = localStorage.getItem('color');
     root.setProperty('--button_background', color);

@@ -7,10 +7,9 @@
 }
 h2.error {
     padding: 5px;
-    border-radius: 5px;
     color: var(--error_color);
     position: absolute;
-    width: 540px;
+    width: 454px;
     text-align: center;
     background: var(--content_background);
 }

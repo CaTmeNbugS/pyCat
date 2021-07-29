@@ -44,9 +44,7 @@ export class SettingsComponent implements OnInit {
     const themes = document.querySelectorAll('.theme');
     const root = document.documentElement.style
     themes.forEach((theme) => {
-        for(let i = 0; i < 2; i++ ){
-          theme.classList.remove('theme_active');
-        };
+      theme.classList.remove('theme_active');
     });
     themes[i].classList.add('theme_active');
     localStorage.removeItem('theme');
@@ -82,14 +80,12 @@ export class SettingsComponent implements OnInit {
     const colors_btn = document.querySelectorAll('.color');
     const root = document.documentElement.style
     colors_btn.forEach((color_btn) => {
-      for(let i = 0; i < 9; i++ ){
-        color_btn.classList.remove('color_active');
-      };
+      color_btn.classList.remove('color_active');
+    });  
     colors_btn[i].classList.add('color_active');  
     localStorage.removeItem('color');
     localStorage.setItem('color', color); 
     root.setProperty('--button_background', color);
     root.setProperty('--search_shadow', color + 36);
-  });
   }
 }

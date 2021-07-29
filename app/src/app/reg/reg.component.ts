@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../backend.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisterResponse, rippleEffect } from '../scripts';
@@ -25,8 +25,6 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class RegComponent implements OnInit {
 
-  @Output() alert_text = new EventEmitter();
-
   form = new FormGroup({
     name: new FormControl('',[Validators.required]),
     surname: new FormControl(''),
@@ -37,32 +35,29 @@ export class RegComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    private backend: BackendService,
     private flashMsg: FlashMessagesService,
     ) { }
 
   ngOnInit(): void {
     const r_btn = document.querySelectorAll('.r_btn');
     rippleEffect(r_btn);
-    console.log(this.alert_text)
   }
   user_reg(){
       const user = {
         name: this.form.value.name,
         email:this.form.value.email,
-        last_name:this.form.value.surname,
+        surname:this.form.value.surname,
         password:this.form.value.password,
         city:this.form.value.city,
       }
-      const alert_text = '<h2 class="alert_text" >Вы зарегестрировались как ' + user.name + '</h2>'
-      this.authService.submitUser(user).subscribe((data: RegisterResponse) => {
+      this.backend.submitUser(user).subscribe((data: RegisterResponse) => {
 
         if(!data.success){
-          this.flashMsg.show('Ошибка регистрации', {cssClass: 'alert', timeout: 5000})
+          this.flashMsg.show('Ошибка регистрации', {cssClass: 'error_alert', timeout: 5000})
           this.router.navigate(['/owner/registration'])
         } else{
-          this.flashMsg.show(alert_text, {cssClass: 'alert', closeOnClick: true, timeout: 7000});
-          this.alert_text.emit(alert_text);
+          this.flashMsg.show('<h2 class="alert_text" >Вы зарегестрировались как ' + user.name + '</h2>', {cssClass: 'alert', closeOnClick: true, timeout: 7000});
           this.router.navigate(['/owner/auth']);
         }
       });

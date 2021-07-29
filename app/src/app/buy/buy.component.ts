@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params} from '@angular/router';
-import { AuthService } from '../auth.service';
+import { BackendService } from '../backend.service';
 import { rippleEffect } from '../scripts';
 import { DeclarationResponse} from '../scripts'
 
@@ -14,12 +14,12 @@ export class BuyComponent implements OnInit {
   showBuy = false;
   imgIndex: number = 0;
 
-  constructor(private route:ActivatedRoute, private declaration: AuthService) { }
+  constructor(private route:ActivatedRoute, private backend: BackendService) { }
 
   declarations: DeclarationResponse;
 
   ngOnInit(): void {
-    this.declaration.getDeclarations().subscribe((declaration:DeclarationResponse[]) => {
+    this.backend.getDeclarations().subscribe((declaration:DeclarationResponse[]) => {
       for(let i = 0; i < declaration.length; i++) {
         this.route.params.subscribe((params:Params) => {
           if(declaration[i]._id == params.id){

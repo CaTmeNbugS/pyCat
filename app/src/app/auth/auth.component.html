@@ -1,18 +1,18 @@
 <div class="loginContainer formContainer content " >
-    <form>
+    <form [formGroup]='form' (submit)="login()">
         <div class="regBox">
             <h2 class="title">Почта</h2>
-            <input class="regPut" type="email"> 
+            <input class="regPut" type="email" formControlName="email"> 
         </div>
         <div class="regBox" >
             <h2 class="title">Пароль</h2>
-            <input class="regPut" type="text"> 
+            <input class="regPut" type="password" formControlName="password" > 
         </div>
-        <div class="buttonBox " >
-            <button class="buttonMit r_btn"><h2>Войти</h2></button>
+        <div style="margin-top: 50px;"  class="buttonBox " >
+            <button class="buttonMit r_btn" type="submit" [disabled]="form.invalid"><h2>Войти</h2></button>
             <p style="margin-top: 5px;">Нет аккаунта?</p>
             <a  routerLink="/owner/registration">
-                <div style="position: absolute;width: 550px;">
+                <div>
                     <h2 class="login" >Зарегестрироваться</h2>
                 </div>
             </a>

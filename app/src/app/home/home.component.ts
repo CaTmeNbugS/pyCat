@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { BackendService } from '../backend.service';
 import { DeclarationResponse } from '../scripts';
 import { rippleEffect } from '../scripts';
 
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   });
 
   constructor(
-    private declaration: AuthService,
+    private backend: BackendService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   declarations: DeclarationResponse[] = [];
   err = false;
   ngOnInit(): void {
-    this.declaration
+    this.backend
       .getDeclarations()
       .subscribe((declaration: DeclarationResponse[]) => {
         this.route.queryParams.subscribe((params: Params) => {

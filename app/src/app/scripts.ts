@@ -17,9 +17,17 @@ export function rippleEffect(btns){
         )
     })
 };
+export function getCookie(cookie) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + cookie.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
 export class RegisterResponse{
     public success: boolean;
     public msg: string;
+    public token: string
+    public user: object;
 }
 export class info{
     passport: boolean;
@@ -30,7 +38,7 @@ export class info{
 export class owner{
     id: string;
     number: string;
-    mail: string;
+    email: string;
     adress: string;
     name: string;
     surname: string;
