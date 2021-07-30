@@ -1,4 +1,12 @@
-
 .loginContainer{
     height: 450px;
+}
+.content.warning {
+    border: 2px solid #f9a825;
+    padding: 15px;
+    display: grid;
+    margin-top: 10px;
+    background: #f9a82521;
+    font-size: 18px;
+    justify-content: center;
 }

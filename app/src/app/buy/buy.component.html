@@ -1,7 +1,7 @@
 <div class="container" >
     <div class="item" >
         <div class="topBarArea" >
-            <a style="align-self: center;" routerLink="/" >
+            <a style="align-self: center;" (click)="back()" >
                 <i class="fas fa-arrow-left"></i>
             </a>
             <div class="catNameContainer" >
@@ -150,8 +150,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 24 24" width="35px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
             </div>
         </div>
-        <div class="contactContainer">
-            <h2 (click)="copy(declarations?.owner.mail, 1)" class="contactBox" *ngIf="declarations?.onlyMail" >{{declarations?.owner.mail}}</h2>
+        <div *ngIf="!declarations?.onlyMail" class="contactContainer">
+            <h2 (click)="copy(declarations?.owner.mail, 1)" class="contactBox"  >{{declarations?.owner.mail}}</h2>
             <div (click)="copy(declarations?.owner.mail, 1)" class="copyBox" >
                 <span>скопировать</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 24 24" width="35px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>

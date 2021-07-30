@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {  ActivatedRoute, Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { BackendService } from '../backend.service';
-import { getCookie, owner, DeclarationResponse } from '../scripts';
+import { getCookie, owner, DeclarationResponse, getUrl } from '../scripts';
 
 @Component({
   selector: 'app-user',
@@ -16,6 +16,7 @@ export class UserComponent implements OnInit {
 
   constructor(    
     private router: Router,
+    private route: ActivatedRoute,
     private backend: BackendService,
     private flashMsg: FlashMessagesService,) { }
 
@@ -31,11 +32,13 @@ export class UserComponent implements OnInit {
         }
       })
     })
-    console.log(user)
   }
   logOut(){
     this.backend.logOut();
-    this.flashMsg.show('Вы вышли из аккаунта', {cssClass: 'alert', timeout: 5000});
+    this.flashMsg.show('<h2 class="alert_text" >Вы вышли из аккаунта</h2>', {cssClass: 'alert', timeout: 5000});
     this.router.navigate(['/owner/auth'])
+  }
+  getUrl(){
+    getUrl(this.route.snapshot.routeConfig.path, this.route.snapshot.queryParams)
   }
 }

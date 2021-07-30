@@ -57,7 +57,7 @@ export class RegComponent implements OnInit {
           this.flashMsg.show('Ошибка регистрации', {cssClass: 'error_alert', timeout: 5000})
           this.router.navigate(['/owner/registration'])
         } else{
-          this.flashMsg.show('<h2 class="alert_text" >Вы зарегестрировались как ' + user.name + '</h2>', {cssClass: 'alert', closeOnClick: true, timeout: 7000});
+          this.flashMsg.show('<h2 class="alert_text" >Вы зарегестрировались как '+ '<b>' + user.name + '</b>' + '</h2>', {cssClass: 'alert', closeOnClick: true, timeout: 7000});
           this.router.navigate(['/owner/auth']);
         }
       });

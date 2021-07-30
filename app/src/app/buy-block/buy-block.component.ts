@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DeclarationResponse } from '../scripts'
+import { ActivatedRoute, Router } from '@angular/router';
+import { DeclarationResponse, getUrl } from '../scripts'
 
 @Component({
   selector: 'app-buy-block',
@@ -10,9 +11,11 @@ export class BuyBlockComponent implements OnInit {
 
   @Input() buyCatBlock: DeclarationResponse;
 
-  constructor() {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
   }
-
+  getUrl(){
+    getUrl(this.route.snapshot.routeConfig.path, this.route.snapshot.queryParams)
+  }
 }

@@ -22,4 +22,6 @@
 .ico_box {
     margin-right: 10px;
     width: 35px;
+    display: grid;
+    place-items: center;
 }

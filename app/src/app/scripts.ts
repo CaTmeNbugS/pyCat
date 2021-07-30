@@ -23,11 +23,19 @@ export function getCookie(cookie) {
     ));
     return matches ? decodeURIComponent(matches[1]) : undefined;
 }
+export function getUrl(path, query){
+    const url = {
+        path: '/' + path,
+        query: query,
+    }
+    sessionStorage.clear
+    sessionStorage.setItem('url', JSON.stringify(url));
+}
 export class RegisterResponse{
     public success: boolean;
     public msg: string;
     public token: string
-    public user: object;
+    public user: owner;
 }
 export class info{
     passport: boolean;

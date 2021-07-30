@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { BackendService } from '../backend.service';
-import { DeclarationResponse } from '../scripts';
-import { rippleEffect } from '../scripts';
-
+import { DeclarationResponse, rippleEffect} from '../scripts';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params} from '@angular/router';
+import { ActivatedRoute, Params, Router} from '@angular/router';
 import { BackendService } from '../backend.service';
 import { rippleEffect } from '../scripts';
 import { DeclarationResponse} from '../scripts'
+
+class url {
+  path: string;
+  query: object;
+}
 
 @Component({
   selector: 'app-buy',
@@ -13,8 +18,9 @@ export class BuyComponent implements OnInit {
 
   showBuy = false;
   imgIndex: number = 0;
+  url: url
 
-  constructor(private route:ActivatedRoute, private backend: BackendService) { }
+  constructor(private route:ActivatedRoute, private backend: BackendService, private router: Router) { }
 
   declarations: DeclarationResponse;
 
@@ -33,6 +39,8 @@ export class BuyComponent implements OnInit {
         })
       }
     });
+    this.url = JSON.parse(sessionStorage.getItem('url'))
+    console.log(this.url)
     const r_btn = document.querySelectorAll('.r_btn');
     rippleEffect(r_btn)
   }
@@ -57,5 +65,7 @@ export class BuyComponent implements OnInit {
     btn[i].classList.add('copied')
     console.log(btn)
   }
-
+  back(){
+    this.router.navigate([this.url.path], {queryParams: this.url.query })
+  }
 }

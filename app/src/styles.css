@@ -220,12 +220,15 @@ i {
   margin: 20px 0px;
   transition: .2s ease-out;
   color: var(--text_color);
+  cursor: pointer;
 }
 .description{
-  padding: 10px;
-  width: 540px;
-  font-size: 18px;
   overflow: scroll;
+  overflow-wrap: break-word;
+  height: 160px;
+  margin-top: 5px;
+  font-family: 'Open Sans';
+  margin-left: 5px;
 }
 .ar_btn {
   padding: 7px;
@@ -302,6 +305,7 @@ i {
   border-right: 10px solid var(--button_background);
   box-shadow: 0 0 20px 0px #00000014;
   transition: .2s ease-out;
+  color: var(--text_color);
 }
 .alert_text:hover {
   border-right: 0px solid var(--content_border_color);
@@ -312,4 +316,24 @@ i {
 #flashMessages {
   position: fixed;
   z-index: 9999;
+}
+b{
+  background: var(--input_background);
+  padding: 5px;
+  border-radius: 5px;
+}
+.regContainer{
+  height: 750px;
+}  
+.errorsBox {
+  height: 40px;
+  margin-bottom: 15px;
+}
+h2.error {
+  padding: 5px;
+  color: var(--error_color);
+  position: absolute;
+  width: 454px;
+  text-align: center;
+  background: var(--content_background);
 }

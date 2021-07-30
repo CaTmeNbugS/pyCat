@@ -10,6 +10,7 @@ router.post('/registration', function(req, res){
         name:  req.body.name,
         surname:  req.body.surname,
         email:  req.body.email,
+        number: req.body.number,
         password:  req.body. password,
         city:  req.body.city,
     });
@@ -28,7 +29,7 @@ router.post('/auth', function(req, res){
     User.getUserByLogin(email, function(err, user){
         if(err) throw err;
         if(!user){
-            return res.json({success:false, msg:'НиТ такого!'});
+            return res.json({success:false, msg:'Пользователь не найден'});
         }    
 
         User.compare_pass(password, user.password, function(err, isMatch){
@@ -38,9 +39,9 @@ router.post('/auth', function(req, res){
                     expiresIn: 3600 * 24 * 24
                 });
 
-                res.json({success:true, token: 'JWT'+ token , user: {id: user._id,name: user.name, surname: user.surname, email: user.email, city: user.city} })
+                res.json({success:true, token: 'JWT'+ token , user: {id: user._id,name: user.name, surname: user.surname, email: user.email,number: user.number, city: user.city} })
             }else{
-                return res.json({success:false, msg:'Не такой пароль'});
+                return res.json({success:false, msg:'Неправильный пароль'});
             }   
         });
     });

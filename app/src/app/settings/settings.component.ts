@@ -55,6 +55,7 @@ export class SettingsComponent implements OnInit {
       root.setProperty('--content_border_color', 'white' );
       root.setProperty('--text_color', 'black' );
       root.setProperty('--input_background', '#ebebeb'); 
+      root.setProperty('--button_background2', '#f5f5f5');
       root.setProperty('--button_color2', 'black');
     }
     if(theme == 'dark'){

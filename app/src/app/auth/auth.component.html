@@ -1,3 +1,7 @@
+<div *ngIf="!auth" class="content warning">
+    <span>Сначала нужно авторизоваться</span>
+</div>
+
 <div class="loginContainer formContainer content " >
     <form [formGroup]='form' (submit)="login()">
         <div class="regBox">
@@ -8,7 +12,12 @@
             <h2 class="title">Пароль</h2>
             <input class="regPut" type="password" formControlName="password" > 
         </div>
-        <div style="margin-top: 50px;"  class="buttonBox " >
+        <div style="margin: 5px 0px 10px 0px;" class="errorsBox" >
+            <div class="errorBlock" >
+                <h2 [@error] class="error" *ngIf="error">{{this.error}}</h2>
+            </div>
+        </div>
+        <div class="buttonBox " >
             <button class="buttonMit r_btn" type="submit" [disabled]="form.invalid"><h2>Войти</h2></button>
             <p style="margin-top: 5px;">Нет аккаунта?</p>
             <a  routerLink="/owner/registration">

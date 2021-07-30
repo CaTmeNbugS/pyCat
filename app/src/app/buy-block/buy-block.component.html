@@ -1,5 +1,5 @@
-<a  routerLink="/buy/{{buyCatBlock._id}}" >
-    <div class="block content" >
+<a routerLink="/buy/{{buyCatBlock._id}}" >
+    <div (click)="getUrl()" class="block content" >
       <div class="img_b" >
         <img src="{{buyCatBlock.imgs[0]}}" >
       </div>
