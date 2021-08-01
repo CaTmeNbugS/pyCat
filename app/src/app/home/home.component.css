@@ -36,7 +36,6 @@
     text-align: center;
     border-radius: 10px;
     font-family: 'Open Sans';
-    background: var(--content_background);
     color: var(--text_color);
     background: var(--input_background);
   }

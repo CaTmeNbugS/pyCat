@@ -1,48 +1,19 @@
 <div style="width: 900px" >
-    <div class="f_block" >
-        <div class="img_b" >
-        </div>
-        <div >
-            <div style="display: flex;" >
-                <div class="second_btn ar_btn" >
-                    <h2>Name</h2>
-                </div>
-                    <i  class="fas fa-bookmark"></i>
+    <div *ngFor="let declaration of declarations"  >
+        <a routerLink="/buy/{{declaration._id}}" >
+        <div (click)='getUrl()' class="f_block" >
+            <div class="img_b" >
+                <img src="{{declaration.imgs[0]}}" >
             </div>
-              
-                <p class="description" >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, rem ratione voluptatum, amet nobis molestiae beatae veritatis ut iusto quas, hic facere nostrum esse eos distinctio illum asperiores aperiam ab?
-                </p>
-        </div>
-    </div>
-    <div class="f_block" >
-        <div class="img_b" >
-        </div>
-        <div >
-            <div style="display: flex;" >
+            <div style="padding: 0px 15px 5px 15px;width: 535px;" >
                 <div class="second_btn ar_btn" >
-                    <h2>Name</h2>
+                    <h2>{{declaration?.name}}</h2>
+                </div>  
+                    <p class="description" >
+                        {{declaration?.description}}
+                    </p>
                 </div>
-                    <i  class="fas fa-bookmark"></i>
             </div>
-                <p class="description" >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, rem ratione voluptatum, amet nobis molestiae beatae veritatis ut iusto quas, hic facere nostrum esse eos distinctio illum asperiores aperiam ab?
-                </p>
-        </div>
-    </div>
-    <div class="f_block" >
-        <div class="img_b" >
-        </div>
-        <div >
-            <div style="display: flex;" >
-                <div class="second_btn ar_btn" >
-                    <h2>Name</h2>
-                </div>
-                    <i  class="fas fa-bookmark"></i>
-            </div>
-                <p class="description" >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, rem ratione voluptatum, amet nobis molestiae beatae veritatis ut iusto quas, hic facere nostrum esse eos distinctio illum asperiores aperiam ab?
-                </p>
-        </div>
+        </a>
     </div>
 </div>

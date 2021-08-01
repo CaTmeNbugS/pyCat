@@ -5,6 +5,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { BackendService } from '../backend.service';
 import { RegisterResponse, rippleEffect } from '../scripts'
+import { error } from '../route-animations'
 
 
 @Component({
@@ -12,15 +13,9 @@ import { RegisterResponse, rippleEffect } from '../scripts'
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
   animations: [
-    trigger('error', [
-      transition('void => *', [
-        style({opacity:0}),
-        animate('.2s ease-out')
-      ]),
-      transition('* => void', [
-        style({opacity:1}),
-        animate('.1s ease-in', style({opacity:0}))
-      ])
+    error,
+    trigger('warning', [
+      transition('* => void', [style({padding: '15px'}), animate('.35s ease-in', style({opacity: 0, marginTop: '-55px'}))])
     ])
   ]
 })

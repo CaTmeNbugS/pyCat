@@ -31,6 +31,15 @@ export function getUrl(path, query){
     sessionStorage.clear
     sessionStorage.setItem('url', JSON.stringify(url));
 }
+export function include(arr, obj){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == obj){
+            return true;    
+        }
+    }
+    return false
+}
+
 export class RegisterResponse{
     public success: boolean;
     public msg: string;
@@ -64,5 +73,5 @@ export class DeclarationResponse{
     public gender: string;
     public breed: string;
     public owner: owner;
-    public onlyMail: boolean;
+    public onlymail: boolean;
 }   

@@ -45,6 +45,10 @@ export class AppComponent implements OnInit {
       localStorage.setItem('theme', 'white');
       localStorage.setItem('color', '#5863F8');
     }
+
+    if(typeof JSON.parse(localStorage.getItem('favorite')) != "object" || !JSON.parse(localStorage.getItem('favorite'))){
+      localStorage.setItem('favorite', JSON.stringify([]))
+    }
     const ripple_btn = document.querySelectorAll('.ripple_btn');
     rippleEffect(ripple_btn);
     const root = document.documentElement.style;

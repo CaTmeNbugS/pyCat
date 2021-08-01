@@ -5,7 +5,19 @@
 .sellerBox{
     display: flex;
 }
-
+.favorite_btn {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: var(--text_color);
+    background: var(--content_background);
+}
+.favorite_btn.active > svg{
+    fill: var(--button_background);
+}
 .imgBox{
     height: 60px;
     background: var(--input_background);
@@ -65,7 +77,7 @@ padding-top: 4px;
     margin-bottom: 20px;
 }
 .catNameContainer{
-    align-self: center;
+    display: flex;
 }
 .img{
     height: 650px;

@@ -1,7 +1,8 @@
-<div *ngIf="!auth" class="content warning">
-    <span>Сначала нужно авторизоваться</span>
+<div style="height: 65px;" >
+    <div [@warning] *ngIf="!auth" (click)='auth = true' class="content warning">
+        <span>Сначала нужно авторизоваться</span>
+    </div>
 </div>
-
 <div class="loginContainer formContainer content " >
     <form [formGroup]='form' (submit)="login()">
         <div class="regBox">

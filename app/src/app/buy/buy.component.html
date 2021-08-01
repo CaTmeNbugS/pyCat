@@ -2,10 +2,13 @@
     <div class="item" >
         <div class="topBarArea" >
             <a style="align-self: center;" (click)="back()" >
-                <i class="fas fa-arrow-left"></i>
+                <i style="cursor: pointer;" class="fas fa-arrow-left"></i>
             </a>
             <div class="catNameContainer" >
                 <h2 class="catName" >{{declarations?.name}}</h2>
+                <div (click)="favorite(this.declarations?._id)" class="favorite_btn" >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="var(--text_color)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+                </div>
             </div>
         </div>
         <div id="imgBox" class="content" >
@@ -13,7 +16,7 @@
             <img class="imgBlur" src="{{declarations?.imgs[imgIndex]}}" >
         </div>
         <div *ngIf="declarations?.imgs.length > 1" class="imgFlexRow" >
-            <div (click)="chosenImg(i)" *ngFor="let img of declarations.imgs; let i = index" class="content imgBlockFlex" >
+            <div (click)="imgIndex = i;" *ngFor="let img of declarations.imgs; let i = index" class="content imgBlockFlex" >
                 <img src="{{img}}">
             </div>
         </div>
@@ -114,12 +117,12 @@
         </div>
     </div>
     <div class="buyContainer" >  
-        <div (click)="buy()" class="buyBtn r_btn" >
+        <div (click)="showBuyMenu()" class="buyBtn r_btn" >
             <h2>Купить</h2>
         </div>
     </div>
     <div class="buyContainer">
-        <div *ngIf="!declarations?.onlyMail" class="contact" >
+        <div *ngIf="!declarations?.onlymail" class="contact" >
             <i  class="fas fa-phone"></i>
             <h2 title="{{declarations?.owner.number}}" >{{declarations?.owner.number}}</h2>
         </div>
@@ -140,23 +143,23 @@
 </div>
 
 </div>
-<div *ngIf="showBuy" class="back" >
+<div *ngIf="buyMenu" class="back" >
     <div style="z-index:999" class="buyBlock content" >
         <span style='font-family: "Open Sans"'>Нажмите, чтобы скопировать</span>
-        <div class="contactContainer">
+        <div *ngIf="!declarations?.onlymail" class="contactContainer">
             <h2 (click)="copy(declarations?.owner.number, 0)" class="contactBox" *ngIf="declarations?.onlyMail" >{{declarations?.owner.number}}</h2>
             <div (click)="copy(declarations?.owner.number, 0)" class="copyBox" >
                 <span>скопировать</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 24 24" width="35px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
             </div>
         </div>
-        <div *ngIf="!declarations?.onlyMail" class="contactContainer">
-            <h2 (click)="copy(declarations?.owner.mail, 1)" class="contactBox"  >{{declarations?.owner.mail}}</h2>
+        <div class="contactContainer">
+            <h2 (click)="copy(declarations?.owner.mail, 1)" class="contactBox"  >{{declarations?.owner.email}}</h2>
             <div (click)="copy(declarations?.owner.mail, 1)" class="copyBox" >
                 <span>скопировать</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 24 24" width="35px" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
             </div>
         </div>
     </div>
-    <div (click)="closeBuy()" class="buyClose" ></div>
+    <div (click)="showBuyMenu()" class="buyClose" ></div>
 </div>

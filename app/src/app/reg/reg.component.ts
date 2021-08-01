@@ -5,22 +5,14 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisterResponse, rippleEffect } from '../scripts';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { error } from '../route-animations'
 
 @Component({
   selector: 'app-reg',
   templateUrl: './reg.component.html',
   styleUrls: ['./reg.component.css'],
   animations: [
-    trigger('error', [
-      transition('void => *', [
-        style({opacity:0}),
-        animate('.2s ease-out')
-      ]),
-      transition('* => void', [
-        style({opacity:1}),
-        animate('.1s ease-in', style({opacity:0}))
-      ])
-    ])
+    error,
   ]
 })
 export class RegComponent implements OnInit {
