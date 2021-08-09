@@ -26,27 +26,40 @@ export class HomeComponent implements OnInit {
 
   declarations: DeclarationResponse[] = [];
   err = false;
+  chips: any[]
+  queryParams = {};
+
   ngOnInit(): void {
     this.backend
       .getDeclarations()
       .subscribe((declaration: DeclarationResponse[]) => {
         this.route.queryParams.subscribe((params: Params) => {
           const keys = Object.keys(params);
-          const values = [params.breed, params.gender];
-          const price = params.price;
+          const values = [params.breed, params.gender, params.city];
 
           const declarations = declaration.filter(function (value) {
               return keys.every(function (key) {
                   return values.includes(value[key]);
               });
             });
-          
-           console.log(declarations);
+
+           this.chips = values.filter(function (value) {
+            if(typeof value != 	"undefined") {
+              return true
+            }
+            return false
+           });
+           for(let i = 0; i < keys.length; i++) {
+            this.queryParams[keys[i]] = params[keys[i]] != undefined ? params[keys[i]] : null;
+           }
+           
            this.declarations = declarations;
+           this.err = !!declarations.length
         });
       });
     const r_btn = document.querySelectorAll('.r_btn');
     rippleEffect(r_btn);
+
   }
   filter() {
 
@@ -59,7 +72,15 @@ export class HomeComponent implements OnInit {
     }
 
     this.router.navigate(['/'], {
-      queryParams: {  breed:breed, gender: gender},
+      queryParams: {  breed:breed, gender: gender, city:city},
     });
+  }
+  removeFilter(value){
+    for(let param in this.queryParams){
+      if(this.queryParams[param] == value){
+        delete this.queryParams[param];
+      }
+    }
+    this.router.navigate(['/'], { queryParams: this.queryParams})
   }
 }

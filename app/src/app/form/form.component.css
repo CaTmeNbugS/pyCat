@@ -1,27 +1,26 @@
 .content.flex_b {
     padding: 5px;
 }
-.ad_form_input{
-    height: 45px;
+.afi{
+    height: 100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
     width: 180px;
-    margin-left: 5px;
     transition: .2s;
     font-size: 25px;
-    font-weight: bold;
-    font-family: 'Roboto';
     text-align: center;
+    background: var(--background);
+    cursor: pointer;
+    color: var(--text-color);
+    font-family: 'Open Sans';
 }
 .s_c {
     padding: 0;
 }
-.ad_form_input:focus {
+.afi:focus {
     outline: none;
-    background: whitesmoke;
 }
-.label_file{
-    height: 150px;
-    border-radius: 10px;
-    margin-top: 15px;
+.radioButtonBox{
+    display: flex;
+    justify-content: space-around;
 }

@@ -82,6 +82,11 @@ form{
   background: none;
   outline: none;
 }
+.regPut:-webkit-autofill{
+  border: 2px solid var(--button_background);
+  box-shadow: inset 0 0 0 50px var(--content_background);
+  -webkit-text-fill-color: var(--text_color) !important;
+}
 h2.login {
   font-size: 20px;
   color: var(--text_color);

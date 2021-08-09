@@ -5,13 +5,6 @@
   .seh_t{
     font-size:20px
   }
-  .fl_search{
-    padding: 15px;
-    width: 1024px;
-    height: 20px;
-    transition: 0.2s;
-    box-shadow: 0px 0px 20px 0px #0000000d;
-  }
   .fl_search_cn{
     padding: 10px 17px;
     width: 1058px;
@@ -43,9 +36,43 @@
     padding: 20px 15px 15px 15px;
     color: var(--text_color);
   }
+  .closeBox {
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    background: var(--input_background);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .2s linear;
+}
+.closeBox > svg {
+  opacity: 0;
+  transition: .2s;
+  position: absolute;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+.closeBox:hover > svg {
+  opacity: 1;
+}
+.closeBox:hover{
+  background: var(--content_background)
+}
   .old{
     width: 50px !important;
   }
+  .chip {
+    padding: 10px 10px 10px 15px;
+    background: var(--content_background);
+    display: flex;
+    box-shadow: 0px 0px 20px 0px #0000000d;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0px 3px;
+    color: var(--text_color);
+}
   input[type="checkbox"]{
       appearance: none;
       width: 25px;
@@ -58,6 +85,7 @@
   }
   input[type="checkbox"]:hover{
     border: 2px solid var(--button_background);
+    background: var(--content_background);
   }
   input[type="checkbox"]:after{
     font-family: "Font Awesome 5 Free";
@@ -86,4 +114,8 @@
     width: 250px !important;
     margin: 0 !important;
     height: 26px !important;
+}
+.iconErrorBox {
+  display: grid;
+  justify-items: center;
 }

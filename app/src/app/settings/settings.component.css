@@ -9,30 +9,9 @@
 .settings_box{
     padding: 15px 25px;
 }
-.theme_switcher {
-    display: flex;
-    border: 3px solid var(--button_background);
-    border-radius: 10px;
-    overflow: hidden;
-}
-.switch {
-    width: 50%;
-    text-align: center;
-    padding: 7px 0px;
-    cursor: pointer;
-    transition: .2s;
-    color: var(--text_color);
-}
-.switch:hover {
-    background: var(--background);
-}
-.switch_active {
-    color: var(--button_color) !important;
-    background: var(--button_background) !important;
-}
 .theme_box {
     display: flex;
-    margin: 35px 0px;
+    margin: 15px 0px 35px 0px;
 }
 .theme {
     width: 180px;

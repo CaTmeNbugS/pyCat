@@ -19,7 +19,11 @@ export class BuyComponent implements OnInit {
   imgIndex = 0;
   url: url;
 
-  constructor(private route:ActivatedRoute, private backend: BackendService, private router: Router) { }
+  constructor(
+    private route:ActivatedRoute,
+    private backend: BackendService, 
+    private router: Router,
+    ) { }
 
   declarations: DeclarationResponse;
 

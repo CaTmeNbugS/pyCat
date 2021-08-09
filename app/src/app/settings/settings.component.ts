@@ -10,16 +10,6 @@ export class SettingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  
-    const switchs = document.querySelectorAll('.switch');
-    switchs[0].addEventListener('click', function(){
-      switchs[0].classList.add('switch_active');
-      switchs[1].classList.remove('switch_active');
-    })
-    switchs[1].addEventListener('click', function(){
-      switchs[1].classList.add('switch_active');
-      switchs[0].classList.remove('switch_active');
-    })
     const themes = document.querySelectorAll('.theme');
     const theme = localStorage.getItem('theme');
     if(theme == 'white'){

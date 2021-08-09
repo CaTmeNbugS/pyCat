@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
   }
   logOut(){
     this.backend.logOut();
-    this.flashMsg.show('<h2 class="alert_text" >Вы вышли из аккаунта</h2>', {cssClass: 'alert', timeout: 5000});
+    this.flashMsg.show('<h2 class="alert_text" >Вы вышли из аккаунта</h2>', {cssClass: 'alert', closeOnClick: true, timeout: 5000});
     this.router.navigate(['/owner/auth'])
   }
   getUrl(){

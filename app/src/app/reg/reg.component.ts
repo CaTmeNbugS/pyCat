@@ -38,9 +38,9 @@ export class RegComponent implements OnInit {
   user_reg(){
       const user = {
         name: this.form.value.name,
-        email:this.form.value.email,
+        email:this.form.value.email.toLowerCase(),
         surname:this.form.value.surname,
-        password:this.form.value.password,
+        password:this.form.value.password.toLowerCase(),
         city:this.form.value.city,
       }
       this.backend.submitUser(user).subscribe((data: RegisterResponse) => {

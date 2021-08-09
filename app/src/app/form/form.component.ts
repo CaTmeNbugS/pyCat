@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  showPassport = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  select(option, option2){
+    console.log(option, option2);
+  }
 }

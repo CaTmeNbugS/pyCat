@@ -50,14 +50,14 @@ export class AuthComponent implements OnInit {
 
   login(){
     const user = {
-      email: this.form.value.email,
-      password: this.form.value.password
+      email: this.form.value.email.toLowerCase(),
+      password: this.form.value.password.toLowerCase()
     }
     this.backend.auth(user).subscribe((data: RegisterResponse) => {
       if(!data.success){
         this.error = data.msg
       }else{
-        this.flashMsg.show('<h2 class="alert_text" >Вы вошли как '+ '<b>' + data.user.name + '</b>' + '</h2>', {cssClass: 'alert', timeout: 5000});
+        this.flashMsg.show('<h2 class="alert_text" >Вы вошли как '+ '<b>' + data.user.name + '</b>' + '</h2>', {cssClass: 'alert', closeOnClick: true, timeout: 5000});
         this.router.navigate(['owner'])
         this.backend.generateCookie(data.user, data.token)
       }
