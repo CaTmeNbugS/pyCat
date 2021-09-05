@@ -1,1 +1,2 @@
-*.gs linguist-language=Javascrip
+* linguist-vendored
+*.js linguist-vendored=false
